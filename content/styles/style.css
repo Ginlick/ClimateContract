@@ -1,3 +1,148 @@
-﻿:root {
+:root {
+  --bg: white;
+  --accent: #89e365;
+  --accent-hover: #64ef2c;
+  --bg-hover: #e3efde;
+  --main: #000000;
+  --text-color: #656565;
+  --border-color: #b4b4b4;
+  --text: var(--main);
+  --largecontentcolumn-width: min(100%, 1100px);
+  --contentcolumn-width: min(100%, 800px);
+  --base-font-size: 1.2em;
+  --base-font: "Ubuntu", sans-serif;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  box-sizing: border-box;
+  font-family: var(--base-font);
+  font-size:18px;
 
+  margin:0;width:100%;min-height:100%;
+}
+a, .greenText {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+p {
+  line-height: 1.5;
+  margin: 0.5em 0 1em;
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  font-weight: 300;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.8em;
+  line-height: 1.4;
+}
+
+.header {
+  background-color: var(--bg);
+  position: sticky; top: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  z-index: 2;
+}
+.header-wrapper {
+  width: var(--largecontentcolumn-width);
+  height: 100%;
+  margin: auto;
+  height: 150px;
+  position: relative;
+}
+.header-flex {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-width: 50%;
+}
+.nav-tab {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  padding: 0.6em 0.9em;
+  margin: 0 0.3em;
+  border-bottom: 2px solid var(--bg);
+  transition: .2s ease;
+  border-radius: 5px 5px 0 0;
+
+  color: var(--text);
+}
+.nav-tab:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--accent);
+}
+.nav-tab.selected {
+  border-color: var(--accent);
+}
+.lang-cont {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+
+.textColumn-cont {
+  text-align: left;
+  margin: 50px 0 50px;
+  position: relative;
+}
+.massivetitle {
+  margin: 60px 0 60px;
+}
+.textColumn {
+  width: var(--contentcolumn-width);
+  margin: 6em auto;
+}
+
+.button {
+  background-color: var(--accent);
+  color: var(--bg);
+  font-family: var(--base-font);
+  border: none;
+  border-radius: 100px;
+  margin: 0.3em;
+  font-size: var(--base-font-size);
+  padding: 0.6em 1em;
+}
+.button.smal {
+  font-size: calc(var(--base-font-size) - 0.2em);
+  padding: 0.3em 0.6em;
+}
+.button:hover {
+  background-color: var(--accent-hover);
+}
+
+
+
+.logo-cont  {
+  height: 70%;
+  position: absolute;
+  top: 20%; left: 5%;
+}
+.logo-cont img {
+  height: 100%;
+}
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+.margin-top-0 {
+  margin-top: 0;
+}
+.big-margin-bottom {
+  margin-bottom: 2em;
 }

@@ -1,0 +1,15 @@
+ErrorDocument 404 /service/errors/404.php
+ErrorDocument 500 /service/errors/500.php
+
+
+RewriteEngine on
+
+RewriteRule ^$ /home.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
