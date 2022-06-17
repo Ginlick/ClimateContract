@@ -23,6 +23,7 @@ $core = new core(3);
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>

@@ -69,9 +69,8 @@ $core->useContracts();
     <section class="maincontent">
       <section class="textColumn-cont">
         <div class="textColumn">
-          <h1>Download Contracts</h2>
-          <p class="big-margin-bottom">Choose the contract template that best fits your wishes.<br>
-          Feel free to edit the templates to adapt them to your needs!</p>
+          <h1><?php $core->printWord(26); ?></h2>
+          <p class="big-margin-bottom"><?php $core->printWord(27); ?></p>
           <?php
             echo $core->contracts->giveAll();
           ?>
@@ -79,6 +78,7 @@ $core->useContracts();
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>

@@ -33,6 +33,9 @@ class contracts {
         $response .= $this->giveOne($row);
       }
     }
+    if ($response == ""){
+      $response = $this->core->giveWord(38);
+    }
     return $response;
   }
 
@@ -40,9 +43,12 @@ class contracts {
     $contractStencil = $this->contractStencil;
     $files = json_decode($row["file"], true);
     if (isset($files[$this->core->lang])){$files = $files[$this->core->lang];} else {return "";}
+    $name = json_decode($row["name"], true)[$this->core->lang];
+    $description = json_decode($row["description"], true)[$this->core->lang];
+
     $contractStencil = str_replace("%%contract_img", $row["img"], $contractStencil);
-    $contractStencil = str_replace("%%contract_title", $row["name"], $contractStencil);
-    $contractStencil = str_replace("%%contract_description", $row["description"], $contractStencil);
+    $contractStencil = str_replace("%%contract_title", $name, $contractStencil);
+    $contractStencil = str_replace("%%contract_description", $description, $contractStencil);
     $dlbutts = "";
     if (isset($files["pdf"])){
       $dlbutts .= str_replace("%%view_contract", $files["pdf"], '<a href="%%view_contract" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i> view</button></a>');

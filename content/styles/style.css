@@ -1,32 +1,47 @@
 :root {
   --bg: white;
-  --accent: #89e365;
-  --accent-hover: #64ef2c;
+  --link: #89e365;
+  --link-hover: var(--accent);
+  --accent: #77bc2d;
+  --dark-accent: #569413;
   --bg-hover: #e3efde;
   --main: #000000;
   --text-color: #656565;
   --border-color: #b4b4b4;
   --text: var(--main);
-  --largecontentcolumn-width: min(100%, 1100px);
-  --contentcolumn-width: min(100%, 800px);
+  --largecontentcolumn-width: min(80%, 1100px);
+  --contentcolumn-width: min(80%, 800px);
   --base-font-size: 1.2em;
   --base-font: "Ubuntu", sans-serif;
+  --header-height: 150px;
 }
 body {
   background-color: var(--bg);
   color: var(--text);
   box-sizing: border-box;
   font-family: var(--base-font);
-  font-size:18px;
+  font-size: 18px;
+  line-height: 1.5;
 
   margin:0;width:100%;min-height:100%;
 }
-a, .greenText {
-  color: var(--accent);
+a, .fakelink {
+  color: var(--link);
   text-decoration: none;
+  font-weight: 400;
+  transition: .1s ease;
 }
-a:hover {
-  color: var(--accent-hover);
+a:hover, .fakelink:hover {
+  color: var(--link-hover);
+}
+p a:hover {
+  text-decoration: underline;
+}
+.fancyjump {
+    transition: .1s ease;
+}
+.fancyjump:active {
+    transform: translate(0, -7px);
 }
 p {
   line-height: 1.5;
@@ -42,6 +57,13 @@ h2 {
   font-size: 2.8em;
   line-height: 1.4;
 }
+h3 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+.greenText {
+  color: var(--link);
+}
 
 .header {
   background-color: var(--bg);
@@ -53,7 +75,7 @@ h2 {
   width: var(--largecontentcolumn-width);
   height: 100%;
   margin: auto;
-  height: 150px;
+  height: var(--header-height);
   position: relative;
 }
 .header-flex {
@@ -61,6 +83,9 @@ h2 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
+}
+.main-nav {
+  height: 100%;
 }
 .nav-cont {
   display: flex;
@@ -95,7 +120,9 @@ h2 {
   right: 0.5em;
 }
 
-
+.allcontent {
+  min-height: calc(95vh - 150px);
+}
 .textColumn-cont {
   text-align: left;
   margin: 50px 0 50px;
@@ -118,13 +145,15 @@ h2 {
   margin: 0.3em;
   font-size: var(--base-font-size);
   padding: 0.6em 1em;
+  transition: .2s ease;
 }
 .button.smal {
   font-size: calc(var(--base-font-size) - 0.2em);
   padding: 0.3em 0.6em;
 }
 .button:hover {
-  background-color: var(--accent-hover);
+  background-color: var(--dark-accent);
+  cursor: pointer;
 }
 
 
@@ -132,7 +161,7 @@ h2 {
 .logo-cont  {
   height: 70%;
   position: absolute;
-  top: 20%; left: 5%;
+  top: 20%; left: 0;
 }
 .logo-cont img {
   height: 100%;
@@ -143,6 +172,112 @@ h2 {
 .margin-top-0 {
   margin-top: 0;
 }
+.nomargin {
+  margin: 0;
+}
 .big-margin-bottom {
   margin-bottom: 2em;
+}
+
+
+.footer {
+  width: 100%;
+  background-color: var(--accent);
+  margin-top: 150px;
+}
+.footer *, .footer *:hover {
+  color: var(--bg);
+}
+.footerList {
+  display: flex;
+  flex-direction: row;
+  align-items: space-evenly;
+  padding: 20px 10px 10px 10px;
+}
+.bottomFooter {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+  background-color: var(--dark-accent);
+  padding: 10px;
+}
+.bottomFooter .flexer {
+  display: flex;
+  align-items: center;
+}
+.bottomFooter p {
+  margin: 0;
+}
+.sharerCont {
+  padding: 0 15px 0 0;
+}
+.sharerCont a {
+  margin: 0 10px;
+}
+.in-main-nav {
+  height: 100%;
+}
+.menu-cont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 50px;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu-cont {
+    display: flex;
+  }
+  .main-nav {
+    background-color: var(--bg);
+    position: fixed; top: calc(var(--header-height) - 1px); right: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    transform: translateX(100%);
+    transition: .2s ease;
+    pointer-events: all;
+  }
+  .in-main-nav {
+    margin-top: 50px;
+    width: 100%; height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .lang-cont, .header-flex {
+    display: block;
+    position: relative;
+  }
+  .header-flex {
+    width: auto; height: auto;
+  }
+  .nav-cont {
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid var(--border-color);
+  }
+  .nav-tab {
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  .header-flex, .nav-cont, .nav-cont a, .nav-tab {
+    width: 100%;
+  }
+  .lang-cont {
+    top: 0; right: 0;
+    padding-left: 0.9em;
+  }
+  .main-nav.shown {
+    transform: translateX(0);
+  }
 }

@@ -19,13 +19,14 @@
     <section class="maincontent">
       <section class="textColumn-cont">
         <div class="textColumn">
-          <h1>500. Server error.</h2>
-          <p>Sorry, the server encountered an unexpected condition.</p>
-          <a href="/home"><button class="button">Home</button></a>
+          <h1><?php $core->printWord(36); ?></h2>
+          <p><?php $core->printWord(37); ?></p>
+          <a href="/home"><button class="button"><?php $core->printWord(33); ?></button></a>
         </div>
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>

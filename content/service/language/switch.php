@@ -36,13 +36,14 @@ if (isset($_COOKIE["lang"])){
     <section class="maincontent">
       <section class="textColumn-cont">
         <div class="textColumn">
-          <h1>Switch Language</h2>
-          <p>To save your language preference, we need to set 1 cookie.</p>
-          <a href="doswitch?tl=<?php echo $core->lang."&return=".$return; ?>"><button class="button">Accept and continue</button></a>
+          <h1><?php $core->printWord(28); ?></h2>
+          <p><?php $core->printWord(29); ?></p>
+          <a href="doswitch?tl=<?php echo $core->lang."&return=".$return; ?>"><button class="button"><?php $core->printWord(30); ?></button></a>
         </div>
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>

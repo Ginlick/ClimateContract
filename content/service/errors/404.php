@@ -19,13 +19,14 @@
     <section class="maincontent">
       <section class="textColumn-cont">
         <div class="textColumn">
-          <h1>404. Page not found.</h2>
-          <p>Sorry, but the page you're looking for can't be found.</p>
-          <a href="/home"><button class="button">Home</button></a>
+          <h1><?php $core->printWord(31); ?></h2>
+          <p><?php $core->printWord(32); ?></p>
+          <a href="/home"><button class="button"><?php $core->printWord(33); ?></button></a>
         </div>
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>

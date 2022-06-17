@@ -19,13 +19,14 @@
     <section class="maincontent">
       <section class="textColumn-cont">
         <div class="textColumn">
-          <h1>Oops! There's been an error.</h2>
-          <p>The issue has been logged, and the administrator notified.</p>
-          <a href="/home"><button class="button">Home</button></a>
+          <h1><?php $core->printWord(34); ?></h2>
+          <p><?php $core->printWord(35); ?></p>
+          <a href="/home"><button class="button"><?php $core->printWord(33); ?>Home</button></a>
         </div>
       </section>
     </section>
   </section>
+  <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>
