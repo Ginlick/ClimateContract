@@ -4,7 +4,7 @@ ErrorDocument 500 /service/errors/500.php
 
 RewriteEngine on
 
-RewriteRule ^$ /home.html [L]
+RewriteRule ^$ /home.php [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}\.html -f
