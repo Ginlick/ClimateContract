@@ -1,2 +1,192 @@
-{"1":{"id":1,"EN":"Home","DE":"Homepage"},"2":{"id":2,"EN":"Download Contract","DE":"Vertr\u00e4ge"},"3":{"id":3,"EN":"Testimonials","DE":"Erfahrungen"},"4":{"id":4,"EN":"Climate Contract logo","DE":"Climate Contract logo"},"5":{"id":5,"EN":"Easily encourage sustainability.","DE":"Klimavertr\u00e4glichkeit, ganz einfach."},"6":{"id":6,"EN":"Parents and their children sign a contract guaranteeing financial support for the extra costs of sustainable behavior. In this way, the biggest hindrance to climate-friendly life for young people is removed.","DE":"Das ist Text."},"7":{"id":7,"EN":"","DE":"Hier "},"8":{"id":8,"EN":"Download a contract ","DE":"Vertrag herunterladen"},"9":{"id":9,"EN":"today!","DE":"."},"10":{"id":10,"EN":"Download. Edit. Sign. Done!","DE":"Herunterladen. Anpassen. Unterschreiben. Fertig!"},"11":{"id":11,"EN":"How to make a contract","DE":"Wie funktioniert es?"},"12":{"id":12,"EN":"More questions?","DE":"Weitere Fragen"},"13":{"id":13,"EN":"1. Choose Template","DE":"1. Vorlage Ausw\u00e4hlen"},"14":{"id":14,"EN":"2. Edit","DE":"2. Anpassen"},"15":{"id":15,"EN":"3. Sign","DE":"3. Unterschreiben"},"16":{"id":16,"EN":"Choose the template adapted to your need from our selection<\/a>. You can focus on travelling, tech objects...","DE":""},"17":{"id":17,"EN":"If you wish, you can customize the contract. Adapt the validity period, improve the conditions, or expand its scope as you please! The contracts are templates, not fixed rules.","DE":""},"18":{"id":18,"EN":"Sign the final contract with your child. Make sure you both understand the climate benefits of the contract, as well as its limitations. Behavior can make an even bigger difference - after all, money is not everything!","DE":""},"19":{"id":19,"EN":"We answer frequently asked questions, and outline the concept of Green Youth Contract in greater detail, in this handout <\/i><\/a>.","DE":""},"20":{"id":20,"EN":"Contact","DE":"Kontakt"},"21":{"id":21,"EN":"admin@site.com","DE":"admin@site.com"},"22":{"id":22,"EN":"Source Code","DE":"Quellcode"},"23":{"id":23,"EN":"https:\/\/mysite.com","DE":"https:\/\/mysite.com"},"24":{"id":24,"EN":"Check out Youth Climate Contract!","DE":""},"25":{"id":25,"EN":"climatecrisis,greenyouthcontract","DE":""},"26":{"id":26,"EN":"Download Contracts","DE":"Vertr\u00e4ge Herunterladen"},"27":{"id":27,"EN":"Choose the contract template that best fits your wishes.
-Feel free to edit the templates to adapt them to your needs!","DE":""},"28":{"id":28,"EN":"Switch Language","DE":"Sprache Wechseln"},"29":{"id":29,"EN":"To save your language preference, we need to set 1 cookie.","DE":"Um deine Sprachwahl zu speichern, m\u00fcssen wir 1 Cookie einsetzen."},"30":{"id":30,"EN":"Accept and continue","DE":"Akzeptieren"},"31":{"id":31,"EN":"404. Page not found.","DE":""},"32":{"id":32,"EN":"Sorry, but the page you're looking for can't be found.","DE":""},"33":{"id":33,"EN":"Home","DE":""},"34":{"id":34,"EN":"Oops! There's been an error.","DE":""},"35":{"id":35,"EN":"The issue has been logged, and the administrator notified.","DE":""},"36":{"id":36,"EN":"500. Server error.","DE":""},"37":{"id":37,"EN":"Sorry, the server encountered an unexpected condition.","DE":""},"38":{"id":"38","EN":"Sorry, there are no contracts in your language yet."}}
+{
+    "1": {
+        "id": 1,
+        "EN": "Home",
+        "DE": "Homepage"
+    },
+    "2": {
+        "id": 2,
+        "EN": "Download Contract",
+        "DE": "Verträge"
+    },
+    "3": {
+        "id": 3,
+        "EN": "Testimonials",
+        "DE": "Erfahrungen"
+    },
+    "4": {
+        "id": 4,
+        "EN": "Climate Contract logo",
+        "DE": "Climate Contract logo"
+    },
+    "5": {
+        "id": 5,
+        "EN": "Easily encourage sustainability.",
+        "DE": "Klimaverträglichkeit, ganz einfach."
+    },
+    "6": {
+        "id": 6,
+        "EN": "Parents and their children sign a contract guaranteeing financial support for the extra costs of sustainable behavior. In this way, the biggest hindrance to climate-friendly life for young people is removed.",
+        "DE": "Das ist Text."
+    },
+    "7": {
+        "id": 7,
+        "EN": "",
+        "DE": "Hier&nbsp;"
+    },
+    "8": {
+        "id": 8,
+        "EN": "Download a contract&nbsp;",
+        "DE": "Vertrag herunterladen"
+    },
+    "9": {
+        "id": 9,
+        "EN": "today!",
+        "DE": "."
+    },
+    "10": {
+        "id": 10,
+        "EN": "Download. Edit. Sign. Done!",
+        "DE": "Herunterladen. Anpassen. Unterschreiben. Fertig!"
+    },
+    "11": {
+        "id": 11,
+        "EN": "How to make a contract",
+        "DE": "Wie funktioniert es?"
+    },
+    "12": {
+        "id": 12,
+        "EN": "More questions?",
+        "DE": "Weitere Fragen"
+    },
+    "13": {
+        "id": 13,
+        "EN": "1. Choose Template",
+        "DE": "1. Vorlage Auswählen"
+    },
+    "14": {
+        "id": 14,
+        "EN": "2. Edit",
+        "DE": "2. Anpassen"
+    },
+    "15": {
+        "id": 15,
+        "EN": "3. Sign",
+        "DE": "3. Unterschreiben"
+    },
+    "16": {
+        "id": 16,
+        "EN": "Choose the template adapted to your need from our <a href=\"/contracts\">selection</a>. You can focus on travelling, tech objects...",
+        "DE": ""
+    },
+    "17": {
+        "id": 17,
+        "EN": "If you wish, you can customize the contract. Adapt the validity period, improve the conditions, or expand its scope as you please! The contracts are templates, not fixed rules.",
+        "DE": ""
+    },
+    "18": {
+        "id": 18,
+        "EN": "Sign the final contract with your child. Make sure you both understand the climate benefits of the contract, as well as its limitations. Behavior can make an even bigger difference - after all, money is not everything!",
+        "DE": ""
+    },
+    "19": {
+        "id": 19,
+        "EN": "We answer frequently asked questions, and outline the concept of Green Youth Contract in greater detail, in this <a href=\"/engines/download?file=/files/extras/Handout.pdf&name=Green_Youth_Contract_Handout.pdf\">handout <i class=\"fa-solid fa-arrow-down\"></i></a>.",
+        "DE": ""
+    },
+    "20": {
+        "id": 20,
+        "EN": "Contact",
+        "DE": "Kontakt"
+    },
+    "21": {
+        "id": 21,
+        "EN": "admin@site.com",
+        "DE": "admin@site.com"
+    },
+    "22": {
+        "id": 22,
+        "EN": "Source Code",
+        "DE": "Quellcode"
+    },
+    "23": {
+        "id": 23,
+        "EN": "https://mysite.com",
+        "DE": "https://mysite.com"
+    },
+    "24": {
+        "id": 24,
+        "EN": "Check out Youth Climate Contract!",
+        "DE": ""
+    },
+    "25": {
+        "id": 25,
+        "EN": "climatecrisis,greenyouthcontract",
+        "DE": ""
+    },
+    "26": {
+        "id": 26,
+        "EN": "Download Contracts",
+        "DE": "Verträge Herunterladen"
+    },
+    "27": {
+        "id": 27,
+        "EN": "Choose the contract template that best fits your wishes.<br>Feel free to edit the templates to adapt them to your needs!",
+        "DE": ""
+    },
+    "28": {
+        "id": 28,
+        "EN": "Switch Language",
+        "DE": "Sprache Wechseln"
+    },
+    "29": {
+        "id": 29,
+        "EN": "To save your language preference, we need to set 1 cookie.",
+        "DE": "Um deine Sprachwahl zu speichern, müssen wir 1 Cookie einsetzen."
+    },
+    "30": {
+        "id": 30,
+        "EN": "Accept and continue",
+        "DE": "Akzeptieren"
+    },
+    "31": {
+        "id": 31,
+        "EN": "404. Page not found.",
+        "DE": ""
+    },
+    "32": {
+        "id": 32,
+        "EN": "Sorry, but the page you're looking for can't be found.",
+        "DE": ""
+    },
+    "33": {
+        "id": 33,
+        "EN": "Home",
+        "DE": ""
+    },
+    "34": {
+        "id": 34,
+        "EN": "Oops! There's been an error.",
+        "DE": ""
+    },
+    "35": {
+        "id": 35,
+        "EN": "The issue has been logged, and the administrator notified.",
+        "DE": ""
+    },
+    "36": {
+        "id": 36,
+        "EN": "500. Server error.",
+        "DE": ""
+    },
+    "37": {
+        "id": 37,
+        "EN": "Sorry, the server encountered an unexpected condition.",
+        "DE": ""
+    },
+    "38": {
+        "id": 38,
+        "EN": "Sorry, there are no contracts in your language yet.",
+        "DE": ""
+    }
+}

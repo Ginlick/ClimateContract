@@ -119,6 +119,7 @@ class core {
         $this->lang = $_COOKIE["lang"];
       }
     }
+    $this->urllang = "/".strtolower($this->lang);
     $strJsonFileContents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/service/language/words.json");
     $this->wordArr = json_decode(preg_replace('/[\x00-\x1F]/', '', $strJsonFileContents), true, 512, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
   }
@@ -132,7 +133,7 @@ class core {
     <header class="header">
       <div class="header-wrapper">
         <div class="logo-bigcont">
-          <a href="/home">
+          <a href="'.$this->urllang.'/home">
             <div class="logo-cont">
               <img src="/visuals/logo.png" alt="'.$this->giveWord(4).'"/>
             </div>
@@ -158,10 +159,10 @@ class core {
     foreach ($this->navBarElements as $selectId => $element){
       if (isset($element["visibility"]) AND $element["visibility"] != 1){continue;}
       if ($selectId == $this->domain) {
-        $return .= '<a href="'.$element["href"].'"><div class="nav-tab selected">'.$this->giveWord($element["name"]).'</div></a>';
+        $return .= '<a href="'.$this->urllang.$element["href"].'"><div class="nav-tab selected">'.$this->giveWord($element["name"]).'</div></a>';
         continue;
       }
-      $return .= '<a href="'.$element["href"].'"><div class="nav-tab">'.$this->giveWord($element["name"]).'</div></a>';
+      $return .= '<a href="'.$this->urllang.$element["href"].'"><div class="nav-tab">'.$this->giveWord($element["name"]).'</div></a>';
     }
     $return .= "</div>
             </div>
@@ -173,7 +174,7 @@ class core {
   }
   function giveHtmlTitle() {
     if (isset($this->navBarElements[$this->domain]) AND $this->domain > 1){
-      return "<title>".$this->navBarElements[$this->domain]["name"]." | ".$this->projectName."</title>";
+      return "<title>".$this->giveWord($this->navBarElements[$this->domain]["name"])." | ".$this->projectName."</title>";
     }
     return "<title>".$this->projectName."</title>";
   }

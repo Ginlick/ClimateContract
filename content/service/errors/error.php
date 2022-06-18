@@ -21,7 +21,7 @@
         <div class="textColumn">
           <h1><?php $core->printWord(34); ?></h2>
           <p><?php $core->printWord(35); ?></p>
-          <a href="/home"><button class="button"><?php $core->printWord(33); ?>Home</button></a>
+          <a href="/home"><button class="button"><?php $core->printWord(33); ?></button></a>
         </div>
       </section>
     </section>

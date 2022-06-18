@@ -6,6 +6,9 @@ RewriteEngine on
 
 RewriteRule ^$ /home.php [L]
 
+RewriteRule ^[A-Za-z]{2}/(.*)$ /$1 [L]
+
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
