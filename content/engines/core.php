@@ -183,7 +183,10 @@ class core {
 
 
   function giveWord(int $id) {
-    return $this->wordArr[$id][$this->lang];
+    if (isset($this->wordArr[$id][$this->lang])){
+      return $this->wordArr[$id][$this->lang];
+    }
+    return;
   }
   function printWord(int $id){
     echo $this->giveWord($id);

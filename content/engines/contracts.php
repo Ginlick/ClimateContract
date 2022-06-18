@@ -41,7 +41,7 @@ class contracts {
 
   function giveOne($row){
     $contractStencil = $this->contractStencil;
-    $files = json_decode($row["file"], true);
+    $files = json_decode($row["files"], true);
     if (isset($files[$this->core->lang])){$files = $files[$this->core->lang];} else {return "";}
     $name = json_decode($row["name"], true)[$this->core->lang];
     $description = json_decode($row["description"], true)[$this->core->lang];
