@@ -54,7 +54,7 @@ class contracts {
       $dlbutts .= str_replace("%%view_contract", $files["pdf"], '<a href="%%view_contract" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i> view</button></a>');
     }
     foreach ($files as $filetype => $link){
-      $dlbutts .= '<a href="/engines/download?file='.$link.'&name='.$this->core->purate($name).".".$filetype.'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+      $dlbutts .= '<a href="/engines/download?file='.$link.'&name='.$this->core->purate($name).".".$filetype.'&count='.$row["id"].'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
     }
     $contractStencil = str_replace("%%download_buttons", $dlbutts, $contractStencil);
     return $contractStencil;

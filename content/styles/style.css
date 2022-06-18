@@ -217,6 +217,10 @@ h3 {
 .sharerCont a {
   margin: 0 10px;
 }
+.flexer a:hover {
+  text-decoration: none;
+  color: var(--border-color);
+}
 .in-main-nav {
   height: 100%;
 }

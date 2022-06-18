@@ -14,6 +14,12 @@ else {
 $target = dirname($_SERVER['DOCUMENT_ROOT'])."/content/".$file;
 
 if (file_exists($target)){
+  if (isset($_GET["count"])){
+    $id = $core->purify($_GET["count"], "number");
+    $query = "UPDATE contracts SET downloads = downloads + 1 WHERE id = $id";
+    $core->conn->query($query);
+  }
+
   header('Content-Type: application/octet-stream');
   header('Content-Disposition: attachment; filename="'.$basename.'"');
   header('Expires: 0');
