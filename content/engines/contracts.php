@@ -38,26 +38,69 @@ class contracts {
     }
     return $response;
   }
+  function giveArr($id = "", $single = false) {
+    $response = [];
+    $query = "SELECT * FROM contracts";
+    if ($id != ""){
+      $query .= " WHERE id = $id";
+    }
+    if ($return = $this->conn->query($query)){
+      while ($row = $return->fetch_assoc()){
+        if ($single){
+          $response = $this->parseContract($row);
+        }
+        else {
+          $response[$row["id"]] = $this->parseContract($row);
+        }
+      }
+    }
+    return $response;
+  }
 
   function giveOne($row){
-    $contractStencil = $this->contractStencil;
-    $files = json_decode($row["files"], true);
-    if (isset($files[$this->core->lang])){$files = $files[$this->core->lang];} else {return "";}
-    $name = json_decode($row["name"], true)[$this->core->lang];
-    $description = json_decode($row["description"], true)[$this->core->lang];
+    if ($row = $this->parseContract($row)){
+      $contractStencil = $this->contractStencil;
+      $files = $row["files"];
+      $name = $row["name"];
+      $description = "";
 
-    $contractStencil = str_replace("%%contract_img", $row["img"], $contractStencil);
-    $contractStencil = str_replace("%%contract_title", $name, $contractStencil);
-    $contractStencil = str_replace("%%contract_description", $description, $contractStencil);
-    $dlbutts = "";
-    if (isset($files["pdf"])){
-      $dlbutts .= str_replace("%%view_contract", $files["pdf"], '<a href="%%view_contract" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i> view</button></a>');
+      $info = [];
+      if ($row["downloads"]>10){$info["downloads"] = $row["downloads"];}
+      $query = "SELECT id FROM testimonials WHERE contract = ".$row["id"];
+      if ($result = $this->conn->query($query)){
+        $info["testimonials"] = mysqli_num_rows($result);
+      }
+      if (count($info)>0){
+        $spacer = false; $description .= "<span class='info'>";
+        foreach ($info as $key => $value){
+          if ($spacer){$description .= " &#183; "; }else {$spacer = true;}
+          $description .= $value." ".$key;
+        }
+        $description .= "</span><br>";
+      }
+      $description .= $row["description"];
+
+      $contractStencil = str_replace("%%contract_img", $row["img"], $contractStencil);
+      $contractStencil = str_replace("%%contract_title", $name, $contractStencil);
+      $contractStencil = str_replace("%%contract_description", $description, $contractStencil);
+      $dlbutts = "";
+      if (isset($files["pdf"])){
+        $dlbutts .= str_replace("%%view_contract", $files["pdf"], '<a href="%%view_contract" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i> view</button></a>');
+      }
+      foreach ($files as $filetype => $link){
+        $dlbutts .= '<a href="/engines/download?file='.$link.'&name='.$this->core->purate($name).".".$filetype.'&count='.$row["id"].'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+      }
+      $contractStencil = str_replace("%%download_buttons", $dlbutts, $contractStencil);
+      return $contractStencil;
     }
-    foreach ($files as $filetype => $link){
-      $dlbutts .= '<a href="/engines/download?file='.$link.'&name='.$this->core->purate($name).".".$filetype.'&count='.$row["id"].'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
-    }
-    $contractStencil = str_replace("%%download_buttons", $dlbutts, $contractStencil);
-    return $contractStencil;
+    return "";
+  }
+  function parseContract($row){
+    $files = json_decode($row["files"], true);
+    if (isset($files[$this->core->lang])){$row["files"] = $files[$this->core->lang];} else {return false;}
+    $row["name"] = json_decode($row["name"], true)[$this->core->lang];
+    $row["description"] = json_decode($row["description"], true)[$this->core->lang];
+    return $row;
   }
 
 }

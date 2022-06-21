@@ -116,7 +116,7 @@
       <section class="textColumn-cont">
         <div class="textColumn">
           <p><?php $core->printWord(6); ?></p>
-          <p><?php $core->printWord(7); ?><a href="/contracts"><?php $core->printWord(8); ?></a><?php $core->printWord(9); ?></p>
+          <p><?php $core->printWord(7); ?></p>
         </div>
 
         <div class="midBar-cont">

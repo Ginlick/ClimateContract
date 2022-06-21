@@ -31,18 +31,8 @@
     },
     "7": {
         "id": 7,
-        "EN": "",
-        "DE": "Hier&nbsp;"
-    },
-    "8": {
-        "id": 8,
-        "EN": "Download a contract&nbsp;",
-        "DE": "Vertrag herunterladen"
-    },
-    "9": {
-        "id": 9,
-        "EN": "today!",
-        "DE": "."
+        "EN": "<a href=\"contracts\">Download a contract</a> today!",
+        "DE": "Hier <a href=\"contracts\">Vertrag herunterladen</a>."
     },
     "10": {
         "id": 10,
@@ -76,7 +66,7 @@
     },
     "16": {
         "id": 16,
-        "EN": "Choose the template adapted to your need from our <a href=\"/contracts\">selection</a>. You can focus on travelling, tech objects...",
+        "EN": "Choose the template adapted to your needs from our <a href=\"contracts\">selection</a>. You can focus on travelling, tech objects...",
         "DE": ""
     },
     "17": {
@@ -187,6 +177,201 @@
     "38": {
         "id": 38,
         "EN": "Sorry, there are no contracts in your language yet.",
+        "DE": ""
+    },
+    "39": {
+        "id": 39,
+        "EN": "Testimonials",
+        "DE": ""
+    },
+    "40": {
+        "id": 40,
+        "EN": "Share your experiences with other users!",
+        "DE": ""
+    },
+    "41": {
+        "id": 41,
+        "EN": "Write Testimonial",
+        "DE": ""
+    },
+    "42": {
+        "id": 42,
+        "EN": "Write Testimonial",
+        "DE": ""
+    },
+    "43": {
+        "id": 43,
+        "EN": "Tell people what you thought about downloading your contract!",
+        "DE": ""
+    },
+    "44": {
+        "id": 44,
+        "EN": "Names",
+        "DE": ""
+    },
+    "45": {
+        "id": 45,
+        "EN": "Joanna and her daughter",
+        "DE": ""
+    },
+    "46": {
+        "id": 46,
+        "EN": "Who you are (please don't write your full real name).",
+        "DE": ""
+    },
+    "47": {
+        "id": 47,
+        "EN": "Contract Chosen",
+        "DE": ""
+    },
+    "48": {
+        "id": 48,
+        "EN": "Choose the contract you used.",
+        "DE": ""
+    },
+    "49": {
+        "id": 49,
+        "EN": "Your Experience",
+        "DE": ""
+    },
+    "50": {
+        "id": 50,
+        "EN": "My daughter and I are quite worried about the effects of climate change, and the Sustainable Travel Contract helped us to...",
+        "DE": ""
+    },
+    "51": {
+        "id": 51,
+        "EN": "Write a short text about your thoughts when downloading/editing the contract, and initial experiences.",
+        "DE": ""
+    },
+    "52": {
+        "id": 52,
+        "EN": "Submit",
+        "DE": ""
+    },
+    "53": {
+        "id": 53,
+        "EN": "Error: Possible fraud detected. Please try again.",
+        "DE": ""
+    },
+    "54": {
+        "id": 54,
+        "EN": "Error: Incorrect input.",
+        "DE": ""
+    },
+    "55": {
+        "id": 55,
+        "EN": "Error: An error occurred.",
+        "DE": ""
+    },
+    "56": {
+        "id": 56,
+        "EN": "Cancel",
+        "DE": ""
+    },
+    "57": {
+        "id": 57,
+        "EN": "Project Manager",
+        "DE": "Projektleiterin"
+    },
+    "58": {
+        "id": 58,
+        "EN": "Project Manager",
+        "DE": "Projektleiter"
+    },
+    "59": {
+        "id": 59,
+        "EN": "Check out this Climate Contract testimonial!",
+        "DE": ""
+    },
+    "60": {
+        "id": 60,
+        "EN": "",
+        "DE": "vor"
+    },
+    "61": {
+        "id": 61,
+        "EN": "ago",
+        "DE": ""
+    },
+    "62": {
+        "id": 62,
+        "EN": "year",
+        "DE": ""
+    },
+    "63": {
+        "id": 63,
+        "EN": "years",
+        "DE": ""
+    },
+    "64": {
+        "id": 64,
+        "EN": "month",
+        "DE": ""
+    },
+    "65": {
+        "id": 65,
+        "EN": "months",
+        "DE": ""
+    },
+    "66": {
+        "id": 66,
+        "EN": "week",
+        "DE": ""
+    },
+    "67": {
+        "id": 67,
+        "EN": "weeks",
+        "DE": ""
+    },
+    "68": {
+        "id": 68,
+        "EN": "day",
+        "DE": ""
+    },
+    "69": {
+        "id": 69,
+        "EN": "days",
+        "DE": ""
+    },
+    "70": {
+        "id": 70,
+        "EN": "hour",
+        "DE": ""
+    },
+    "71": {
+        "id": 71,
+        "EN": "hours",
+        "DE": ""
+    },
+    "72": {
+        "id": 72,
+        "EN": "minute",
+        "DE": ""
+    },
+    "73": {
+        "id": 73,
+        "EN": "minutes",
+        "DE": ""
+    },
+    "74": {
+        "id": 74,
+        "EN": "Just Posted",
+        "DE": "Gerade Eben"
+    },
+    "75": {
+        "id": 75,
+        "EN": "Testimonial by",
+        "DE": "Erfahrung von"
+    },
+    "76": {
+        "id": 76,
+        "EN": "Want to share your own experiences?",
+        "DE": ""
+    },
+    "77": {
+        "id": 77,
+        "EN": "Explore all testimonials",
         "DE": ""
     }
 }

@@ -3,7 +3,7 @@
 
 class errorHandler {
   use coreFunctions;
-  public $testMode = false;
+  public $testMode = true;
 
   function __construct() {
     $this->setConn();
