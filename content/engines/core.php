@@ -1,72 +1,18 @@
 <?php
 
-trait basicElements {
-  function giveHtmlHeaders() {
-    $headers = '
-        <meta charset="UTF-8" />
-        <link rel="icon" href="/visuals/favicon.png">
-        <link rel="stylesheet" type="text/css" href="/styles/style.css">
-        <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
-        <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
-        <link href="/assets/fontawesome/css/brands.css" rel="stylesheet">
-        ';
-    $headers .= $this->giveHtmlTitle();
-    return $headers;
-  }
-  function giveCorelinks() {
-    $headers = '
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-    <script>
-      var mainnav = document.getElementById("main-nav");
-      function toggleMenu(menu) {
-        if (!menu.classList.contains("fa-rotate-90")) {
-          menu.classList.add("fa-rotate-90");
-          mainnav.classList.add("shown");
-        }
-        else {
-          menu.classList.remove("fa-rotate-90");
-          mainnav.classList.remove("shown");
-        }
-      }
-    </script>
-    ';
-    return $headers;
-  }
-  function giveFooter() {
-    return '
-    <footer class="footer">
-      <div class="footerList">
-        <div class="footerBlock">
-          <h3>'.$this->giveWord(20).'</h3>
-          <p>
-            <a href="mailto:'.$this->giveWord(21).'" target="_blank">'.$this->giveWord(21).'</a>
-          </p>
-        </div>
-      </div>
-      <div class="bottomFooter">
-        <div class="flexer">
-          <p>© 2022 Green Youth Contract</p>
-        </div>
-        <div class="flexer">
-          <p><a href="https://github.com/Ginlick/ClimateContract" target="_blank">'.$this->giveWord(22).'</a><p>
-        </div>
-        <div class="flexer sharerCont">
-            <p><a href="https://www.facebook.com/sharer/sharer.php?u='.$this->giveWord(23).'" target="_blank" class="fa-brands fa-facebook"></a>
-            <a href="http://www.reddit.com/submit?title='.$this->giveWord(24).'!&url='.$this->giveWord(23).'" target="_blank" class="fa-brands fa-reddit"></a>
-            <a href="https://twitter.com/intent/tweet?text='.$this->giveWord(24).'!%0A&url='.$this->giveWord(23).'&hashtags='.$this->giveWord(25).'" target="_blank" class="fa-brands fa-twitter"></a>
-            <a class="fa fa-link fancyjump" onclick="navigator.clipboard.writeText(\''.$this->giveWord(23).'\');"></a></p>
-        </div>
-      </div>
-    </footer>
-    ';
-  }
-}
 trait coreFunctions {
+  function getskey(string $which) {
+    if ($which == "captcha"){
+      require(dirname(dirname($_SERVER['DOCUMENT_ROOT']))."/keys/captcha.php");
+      return $skey;
+    }
+    else if ($which == "conn"){
+      require(dirname(dirname($_SERVER['DOCUMENT_ROOT']))."/keys/connInfo.php");
+      return new mysqli($servername, $username, $password, $dbname);
+    }
+  }
   function setConn() {
-    require(dirname(dirname($_SERVER['DOCUMENT_ROOT']))."/keys/connInfo.php");
-    $this->conn = new mysqli($servername, $username, $password, $dbname);
+    $this->conn = $this->getskey("conn");
   }
   function purate($input, $regex = "basic") {
     //for links
@@ -84,6 +30,10 @@ trait coreFunctions {
   }
   function go($place) {
     $this->killCache();
+    if (preg_match("/^\/[A-Za-z]{2}\/.*$/", $place) AND isset($this->lang)){
+      $place = preg_replace("/^\/[A-Za-z]{2}\//", "/", $place);
+      $place = "/".strtolower($this->lang).$place;
+    }
     echo "<script>window.location.replace('$place');</script>";
     exit;
   }
@@ -94,13 +44,13 @@ require_once($_SERVER['DOCUMENT_ROOT']."/engines/errorHandler.php");
 
 
 class core {
-  use basicElements;
   use coreFunctions;
   public $lang = "EN";
   public $domain = 1;
   public $projectName = "Students Travel Green";
+  public $extraModules = [];
 
-  public $navBarElements = [1 => ["name"=>1, "href"=>"/home"], 2 => ["name"=>2, "href"=>"/contracts"], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>0]];
+  public $navBarElements = [1 => ["name"=>1, "href"=>"/home"], 2 => ["name"=>2, "href"=>"/contracts"], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
   public $langs = ["EN", "DE"];
   public $regArrayR = [
     "basic" => "/[^A-Za-z0-9_]/",
@@ -126,6 +76,14 @@ class core {
   function useContracts() {
     require_once($_SERVER['DOCUMENT_ROOT']."/engines/contracts.php");
     $this->contracts = new contracts($this);
+  }
+  function useBlogs() {
+    array_push($this->extraModules, "blogs");
+    require_once($_SERVER['DOCUMENT_ROOT']."/engines/blogs.php");
+    require_once($_SERVER['DOCUMENT_ROOT']."/engines/parser.php");
+    $this->parse = new parser;
+    $this->useContracts();
+    return new blogEngine($this);
   }
 
   function giveHeader() {
@@ -180,8 +138,6 @@ class core {
   }
 
   //language
-
-
   function giveWord(int $id) {
     if (isset($this->wordArr[$id][$this->lang])){
       return $this->wordArr[$id][$this->lang];
@@ -190,6 +146,80 @@ class core {
   }
   function printWord(int $id){
     echo $this->giveWord($id);
+  }
+
+  //gives
+  function giveHtmlHeaders() {
+    $headers = '
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/visuals/favicon.png">
+        <link rel="stylesheet" type="text/css" href="/styles/style.css">
+        <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
+        <link href="/assets/fontawesome/css/brands.css" rel="stylesheet">
+        ';
+    $headers .= $this->giveHtmlTitle();
+    if (in_array("blogs", $this->extraModules)){
+      $headers .= '<link rel="stylesheet" type="text/css" href="/styles/blog.css">';
+    }
+    return $headers;
+  }
+  function giveCorelinks() {
+    $headers = '
+    <script src="/system/core.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+      var mainnav = document.getElementById("main-nav");
+      function toggleMenu(menu) {
+        if (!menu.classList.contains("fa-rotate-90")) {
+          menu.classList.add("fa-rotate-90");
+          mainnav.classList.add("shown");
+        }
+        else {
+          menu.classList.remove("fa-rotate-90");
+          mainnav.classList.remove("shown");
+        }
+      }
+    </script>
+    ';
+    if (in_array("blogs", $this->extraModules)){
+      $headers .= '<script src="/engines/blogs/blog-feed.js"></script>';
+    }
+    return $headers;
+  }
+  function giveFooter() {
+    return '
+    <footer class="footer">
+      <div class="footerList">
+        <div class="footerBlock">
+          <h3>'.$this->giveWord(20).'</h3>
+          <p>
+            Monja Simmler · '.$this->giveWord(57).'<br>
+            Simon Belt · '.$this->giveWord(58).'
+          </p>
+          <p>
+            <a href="mailto:'.$this->giveWord(21).'" target="_blank">'.$this->giveWord(21).'</a>
+          </p>
+        </div>
+      </div>
+      <div class="bottomFooter">
+        <div class="flexer">
+          <p>© 2022 Green Youth Contract</p>
+        </div>
+        <div class="flexer">
+          <p><a href="https://github.com/Ginlick/ClimateContract" target="_blank">'.$this->giveWord(22).'</a><p>
+        </div>
+        <div class="flexer sharerCont">
+            <p><a href="https://www.facebook.com/sharer/sharer.php?u='.$this->giveWord(23).'" target="_blank" class="fa-brands fa-facebook"></a>
+            <a href="http://www.reddit.com/submit?title='.$this->giveWord(24).'!&url='.$this->giveWord(23).'" target="_blank" class="fa-brands fa-reddit"></a>
+            <a href="https://twitter.com/intent/tweet?text='.$this->giveWord(24).'!%0A&url='.$this->giveWord(23).'&hashtags='.$this->giveWord(25).'" target="_blank" class="fa-brands fa-twitter"></a>
+            <a class="fa fa-link fancyjump" onclick="navigator.clipboard.writeText(\''.$this->giveWord(23).'\');"></a></p>
+        </div>
+      </div>
+    </footer>
+    ';
   }
 }
 

@@ -8,17 +8,25 @@
   --main: #000000;
   --text-color: #656565;
   --border-color: #b4b4b4;
+  --lighter-border-color: #e4e4e4;
+  --warning-color:#de1414;
   --text: var(--main);
   --largecontentcolumn-width: min(80%, 1100px);
   --contentcolumn-width: min(80%, 800px);
   --base-font-size: 1.2em;
+  --small-font-size: 0.9em;
   --base-font: "Ubuntu", sans-serif;
+  --font-formal: Arial, Helvetica, sans-serif;
   --header-height: 150px;
+  --standardborder: 1px solid var(--lighter-border-color);
+  --neatshadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+* {
+  box-sizing: border-box;
 }
 body {
   background-color: var(--bg);
   color: var(--text);
-  box-sizing: border-box;
   font-family: var(--base-font);
   font-size: 18px;
   line-height: 1.5;
@@ -43,7 +51,7 @@ p a:hover {
 .fancyjump:active {
     transform: translate(0, -7px);
 }
-p {
+p, ul {
   line-height: 1.5;
   margin: 0.5em 0 1em;
   font-size: var(--base-font-size);
@@ -155,7 +163,15 @@ h3 {
   background-color: var(--dark-accent);
   cursor: pointer;
 }
-
+.button.grey {
+  background-color: var(--bg);
+  border: 1px solid var(--border-color);
+  color: var(--border-color);
+}
+.button.grey:hover {
+  background-color: var(--border-color);
+  color: var(--bg);
+}
 
 
 .logo-cont  {
@@ -236,7 +252,74 @@ h3 {
   flex-direction: column;
 }
 
+input, textarea, select {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: var(--base-font-size);
+    font-family: var(--base-font);
+    padding: 10px 8px;
+    margin: 4px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    width: 100%;
+    text-align: left;
+    font-weight: lighter;
+  }
+  textarea {
+    resize: vertical;
+  }
+  .inputErr {
+    font-size: var(--small-font-size);
+    color: var(--border-color);
+    text-align: left;
+    margin: 0;
+    padding-left: 0.4vw;
+    font-family: var(--font-formal);
+    transition: .2s;
+    min-height: 10px;
+    opacity: 0;
+    line-height: 1.2;
+  }
+  .errorBoi {
+    color: var(--warning-color);
+    display: none;
+  }
+  .info {
+    color: var(--border-color);
+  }
+
+  /*imgConts*/
+  .imgCont {
+      background-color: var(--bg);
+      animation-name: imgCont;
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+  }
+  @keyframes imgCont {
+      0% {
+          background-color: #c9c9c9;
+      }
+
+      50% {
+          background-color: #eaeaea;
+      }
+
+      100% {
+          background-color: #c9c9c9;
+      }
+  }
+  .imgCont.loaded {
+      background-color: rgba(0,0,0,0);
+      animation: none;
+  }
+
 @media screen and (max-width: 1000px) {
+  body {
+    font-size: 22px;
+  }
+  .button {
+    font-size: 1.8em;
+  }
   .menu-cont {
     display: flex;
   }
@@ -244,7 +327,7 @@ h3 {
     background-color: var(--bg);
     position: fixed; top: calc(var(--header-height) - 1px); right: 0;
     width: 100%;
-    height: calc(100vh - var(--header-height));
+    height: calc(101vh - var(--header-height));
     transform: translateX(100%);
     transition: .2s ease;
     pointer-events: all;
@@ -272,7 +355,7 @@ h3 {
     border-bottom: 1px solid var(--border-color);
     border-radius: 0;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.9em;
   }
   .header-flex, .nav-cont, .nav-cont a, .nav-tab {
     width: 100%;

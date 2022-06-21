@@ -4,9 +4,10 @@ ErrorDocument 500 /service/errors/500.php
 
 RewriteEngine on
 
-RewriteRule ^$ /home.php [L]
+RewriteRule ^[A-Za-z]{2}/(.*)$ /$1
 
-RewriteRule ^[A-Za-z]{2}/(.*)$ /$1 [L]
+RewriteRule ^$ /home.php [L]
+RewriteRule ^(.*)/testimonials/post/([0-9]+)$ /content/testimonials/post.php?id=$2
 
 
 RewriteCond %{REQUEST_FILENAME} !-f
