@@ -62,7 +62,7 @@ h1 {
   font-size: 3em;
 }
 h2 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   line-height: 1.4;
 }
 h3 {
@@ -101,21 +101,43 @@ h3 {
   align-items: flex-end;
   min-width: 50%;
 }
-.nav-tab {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 1.2em;
+.nav-tab-cont {
+  position: relative;
+}
+.nav-tab-cont:hover .nav-tab-tabscont {
+  display: block;
+}
+.nav-tab-tabscont {
+  position: absolute;
+  top: 100%;
+  left: 0.3em;
+  width: 10em;
+  list-style-type: none;
+  padding: 0.2em 0;margin: 0;
+  background-color: var(--bg);
+  border: var(--standardborder);
+  box-shadow: var(--neatshadow);
+  display: none;
+}
+.nav-tab, .nav-smalltab {
   letter-spacing: 0.02em;
   word-spacing: 0.1em;
   padding: 0.6em 0.9em;
+  color: var(--text);
+}
+.nav-tab {
+  font-family: "Ubuntu", sans-serif;
   margin: 0 0.3em;
+  font-size: 1.2em;
+  font-weight: bold;
   border-bottom: 2px solid var(--bg);
   transition: .2s ease;
   border-radius: 5px 5px 0 0;
-
-  color: var(--text);
 }
-.nav-tab:hover {
+.nav-smalltab {
+  font-size: 0.9em;
+}
+.nav-tab:hover, .nav-smalltab:hover {
   background-color: var(--bg-hover);
   border-color: var(--accent);
 }
@@ -207,8 +229,12 @@ h3 {
 .footerList {
   display: flex;
   flex-direction: row;
-  align-items: space-evenly;
+  justify-content: space-around;
   padding: 20px 10px 10px 10px;
+}
+.footerBlock {
+  padding: 5px 15px;
+  width: 28%;
 }
 .bottomFooter {
   box-sizing: border-box;
@@ -351,18 +377,36 @@ input, textarea, select {
     align-items: flex-start;
     border-top: 1px solid var(--border-color);
   }
-  .nav-tab {
+  .nav-tab-cont {
+    width: 100%;
+  }
+  .nav-tab, .nav-smalltab {
     border-bottom: 1px solid var(--border-color);
     border-radius: 0;
     margin: 0;
     font-size: 1.9em;
   }
+  .nav-tab-tabscont {
+    display: block;
+    position: static;
+    padding: 0;
+    width: 100%;
+    border: none; box-shadow: none;
+  }
+  .nav-smalltab {
+    font-size: calc(1.9 * 22px);
+    font-weight: bold;
+    padding-left: 2em;
+  }
+
   .header-flex, .nav-cont, .nav-cont a, .nav-tab {
     width: 100%;
   }
   .lang-cont {
     top: 0; right: 0;
     padding-left: 0.9em;
+    font-size: 30px;
+    padding-top: 0.5em;
   }
   .main-nav.shown {
     transform: translateX(0);

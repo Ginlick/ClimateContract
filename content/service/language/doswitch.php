@@ -6,11 +6,11 @@ $urllang = strtolower($core->lang);
 if (!isset($_GET["tl"]) || $_GET["tl"] == $core->lang){
   $core->go("/$urllang/home");
 }
-if (in_array($_GET["tl"], $core->langs)){
-  $core->lang = $_GET["tl"];
-} else {echo "ouch"; exit;$core->go("/home");}
 
-setcookie("lang", $core->lang, time()+57820000, "/");
+if (!$core->switchLang($_GET["tl"])) {
+  echo "ouch"; $core->go("/home");
+}
+
 $urllang = strtolower($core->lang);
 
 if (isset($_GET["return"])){

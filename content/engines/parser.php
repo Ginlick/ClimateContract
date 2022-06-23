@@ -44,6 +44,7 @@ if (!class_exists("parser")){
         $body = str_replace("[/gallery]", "</div>", $body);
         $body = str_replace("[wide]", "<div class='wide'>", $body);
         $body = str_replace("[/wide]", "</div>", $body);
+        $body = str_replace("[smiley]", "<i class='fa-solid fa-face-smile-beam'></i>", $body);
       }
 
       $specCharLvl = 1;

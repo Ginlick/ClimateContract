@@ -108,7 +108,7 @@ class blogEngine {
       foreach ($stringNames as $k => $v) {
         if ($diff->$k > 0){
           $units = $v[1]; if ($diff->$k==1){$units=$v[0];}
-          $text = $diff->$k." ".$this->core->giveWord(60)." ".$units." ".$this->core->giveWord(61);
+          $text = $this->core->giveWord(60)." ".$diff->$k." ".$units." ".$this->core->giveWord(61);
           return $text;
         }
       }

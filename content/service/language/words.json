@@ -4,6 +4,11 @@
         "EN": "Home",
         "DE": "Homepage"
     },
+    "1-2": {
+        "id": "1-2",
+        "EN": "More Info",
+        "DE": "Zusätzliche Infos"
+    },
     "2": {
         "id": 2,
         "EN": "Download Contract",
@@ -81,7 +86,7 @@
     },
     "19": {
         "id": 19,
-        "EN": "We answer frequently asked questions, and outline the concept of Green Youth Contract in greater detail, in this <a href=\"/engines/download?file=/files/extras/Handout.pdf&name=Green_Youth_Contract_Handout.pdf\">handout <i class=\"fa-solid fa-arrow-down\"></i></a>.",
+        "EN": "If you've still got questions, or want to know more about the concept of Climate Youth Contract, you can <a href=\"/content/home/info\">learn more here</a>.",
         "DE": ""
     },
     "20": {
@@ -373,5 +378,35 @@
         "id": 77,
         "EN": "Explore all testimonials",
         "DE": ""
+    },
+    "79": {
+        "id": 79,
+        "EN": "FAQ",
+        "DE": "Das Konzept von Climate Contract"
+    },
+    "80": {
+        "id": 80,
+        "EN": "About us",
+        "DE": "Impressum"
+    },
+    "81": {
+        "id": 81,
+        "EN": "Privacy",
+        "DE": "Datenschutz"
+    },
+    "82": {
+        "id": 82,
+        "EN": "About us",
+        "DE": "Impressum"
+    },
+    "83": {
+        "id": 83,
+        "EN": "Privacy Policy",
+        "DE": "Datenschutzerklärung"
+    },
+    "84": {
+        "id": 84,
+        "EN": "Links",
+        "DE": "Links"
     }
 }
