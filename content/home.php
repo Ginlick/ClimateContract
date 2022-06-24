@@ -107,7 +107,7 @@
       <section class="textColumn-cont">
         <div class="homeBanner">
           <div class="leftone">
-            <h2 class="homeBuptitle margin-bottom-0"><span class="greenText">Green</span> Youth Contract</h2>
+            <h2 class="homeBuptitle margin-bottom-0"><span class="greenText">Climate</span> Contract</h2>
             <h2 class="subtitle margin-top-0"><?php $core->printWord(5); ?></h2>
           </div>
         </div>
