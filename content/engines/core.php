@@ -160,17 +160,27 @@ class core {
   }
 
   //language
-  function giveWord($id) {
+  function launchParser() {
+    if (!isset($this->textParse) OR gettype($this->textParse) != "object"){
+      $this->textParse = $this->useParser(true);
+    }
+  }
+  function giveWord($id, $parseit = false) {
     if (isset($this->wordArr[$id][$this->lang])){
-      return $this->wordArr[$id][$this->lang];
+      $word = $this->wordArr[$id][$this->lang];
+      if ($parseit){
+        $this->launchParser();
+        $word = $this->textParse->parse($word, 1);
+      }
+      return $word;
     }
     return;
   }
-  function printWord($id){
-    echo $this->giveWord($id);
+  function printWord($id, $parseit = false){
+    echo $this->giveWord($id, $parseit);
   }
   function useText() {
-    $this->textParse = $this->useParser(true);
+    $this->launchParser();
     $strJsonFileContents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/service/language/text.json");
     $this->textArr = json_decode(preg_replace('/[\x00-\x1F]/', '', $strJsonFileContents), true, 512, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
   }

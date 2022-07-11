@@ -28,7 +28,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: var(--base-font);
-  font-size: 18px;
+  font-size: 1.35em;
   line-height: 1.5;
 
   margin:0;width:100%;min-height:100%;
@@ -54,19 +54,19 @@ p a:hover {
 p, ul {
   line-height: 1.5;
   margin: 0.5em 0 1em;
-  font-size: var(--base-font-size);
+  font-size: 1em;
   color: var(--text-color);
   font-weight: 300;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2.7em;
 }
 h2 {
-  font-size: 2.5em;
+  font-size: 1.9em;
   line-height: 1.4;
 }
 h3 {
-  font-size: 1.7em;
+  font-size: 1.3em;
   margin-bottom: 0.5em;
 }
 .greenText {
@@ -128,7 +128,7 @@ h3 {
 .nav-tab {
   font-family: "Ubuntu", sans-serif;
   margin: 0 0.3em;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   border-bottom: 2px solid var(--bg);
   transition: .2s ease;
@@ -341,7 +341,7 @@ input, textarea, select {
 
 @media screen and (max-width: 1000px) {
   body {
-    font-size: 22px;
+    font-size: 1.4em;
   }
   .button {
     font-size: 1.8em;

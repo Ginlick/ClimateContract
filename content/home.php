@@ -115,7 +115,7 @@
       </section>
       <section class="textColumn-cont">
         <div class="textColumn">
-          <p><?php $core->printWord(6); ?></p>
+          <p><?php $core->printWord(6, true); ?></p>
           <p><?php $core->printWord(7); ?></p>
         </div>
 
