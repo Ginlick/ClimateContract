@@ -49,7 +49,7 @@ class core {
   use coreFunctions;
   public $lang = "EN";
   public $domain = 1;
-  public $projectName = "Students Travel Green";
+  public $projectName = "Climate Contract";
   public $extraModules = [];
 
   public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-2","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts"], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
@@ -306,6 +306,12 @@ class core {
       </div>
     </footer>
     ';
+  }
+
+  //miscellaneous
+  function fetchFileUrl($filename, $name, $viewmode = 2, $count = 0, $dir = null) {
+    $text = '/engines/download?file='.$filename.'&name='.$name.'&viewmode='.$viewmode.'&count='.$count;
+    return $text;
   }
 }
 

@@ -80,15 +80,15 @@ class contracts {
       }
       $description .= $row["description"];
 
-      $contractStencil = str_replace("%%contract_img", $row["img"], $contractStencil);
+      $contractStencil = str_replace("%%contract_img", $this->core->fetchFileUrl($row["img"], "thumbnail.png", 2), $contractStencil);
       $contractStencil = str_replace("%%contract_title", $name, $contractStencil);
       $contractStencil = str_replace("%%contract_description", $description, $contractStencil);
       $dlbutts = "";
       if (isset($files["pdf"])){
-        $dlbutts .= str_replace("%%view_contract", $files["pdf"], '<a href="%%view_contract" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i> view</button></a>');
+        $dlbutts .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i>  view</button></a>';
       }
       foreach ($files as $filetype => $link){
-        $dlbutts .= '<a href="/engines/download?file='.$link.'&name='.$this->core->purate($name).".".$filetype.'&count='.$row["id"].'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+        $dlbutts .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $row["id"]).'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
       }
       $contractStencil = str_replace("%%download_buttons", $dlbutts, $contractStencil);
       return $contractStencil;
