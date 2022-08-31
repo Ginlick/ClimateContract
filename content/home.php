@@ -12,25 +12,32 @@
       .homeBanner {
         width: var(--largecontentcolumn-width);
         margin: auto;
-        padding: 60px 0;
         display: flex;
         align-items: center;
         position: relative;
       }
-      .homeBanner .leftone {
+      .leftone {
         z-index: 1;
         width: 60%;
         height: 100%;
+        padding: 110px 0;
+        box-shadow: -30px 0 22px 60px var(--bg);
         display: flex;
         flex-direction: column;
         text-align: left;
+        background-color: var(--bg);
+        transition: 0.5s;
+        }
+        .leftone:hover {
+          transform: translateX(3%);
+
         }
         .subtitle {
           font-weight: lighter;
         }
         .backimg {
           position: absolute;
-          width: 40%;
+          width: 60%;
           height: 100%;
           object-fit: cover;
           top: 0;
@@ -104,14 +111,14 @@
           <?php echo $core->giveHeader(); ?>
     </header>
     <section class="maincontent">
-      <section class="textColumn-cont">
+      <section class="textColumn-cont nopad">
+        <img class="backimg" src="/visuals/worldglobe.jpg" alt="world handshake" />
         <div class="homeBanner">
           <div class="leftone">
             <h2 class="homeBuptitle margin-bottom-0"><span class="greenText">Climate</span> Contract</h2>
             <h2 class="subtitle margin-top-0"><?php $core->printWord(5); ?></h2>
           </div>
         </div>
-        <img class="backimg" src="/visuals/worldshake.jpeg" alt="world handshake" />
       </section>
       <section class="textColumn-cont">
         <div class="textColumn">

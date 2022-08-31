@@ -47,7 +47,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/engines/errorHandler.php");
 
 class core {
   use coreFunctions;
-  public $lang = "EN";
+  public $lang = "DE";
   public $domain = 1;
   public $projectName = "Climate Contract";
   public $extraModules = [];

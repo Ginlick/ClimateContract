@@ -126,8 +126,8 @@
     },
     "27": {
         "id": 27,
-        "EN": "Choose the contract template that best fits your goals.<br>Feel free to edit the template to adapt them to your needs!",
-        "DE": "Wählt die Vertragsvorlage, die am besten zu eurem Ziel passt.<br> Ihr könnt die Vorlage nach Belieben bearbeiten und an eure Bedürfnisse anpassen!"
+        "EN": "Choose the contract template that best fits your goals.<br>Feel free to adapt it even further!",
+        "DE": "Wählt die Vertragsvorlage, die am besten zu eurem Ziel passt.<br> Ihr könnt die Vorlage nach Belieben weiter bearbeiten und an eure Bedürfnisse anpassen!"
     },
     "28": {
         "id": 28,
@@ -408,5 +408,30 @@
         "id": 84,
         "EN": "Links",
         "DE": "Links"
+    },
+    "85": {
+        "id": 85,
+        "EN": "Climate Contract",
+        "DE": "Climate Contract"
+    },
+    "86": {
+        "id": 86,
+        "EN": "Let's get going!",
+        "DE": "Los geht's!"
+    },
+    "87": {
+        "id": 87,
+        "EN": "Download the template contract in the format you wish.",
+        "DE": "Lade die Vertragsvorlage herunter."
+    },
+    "88": {
+        "id": 88,
+        "EN": "All Contracts",
+        "DE": "Alle Verträge"
+    },
+    "89": {
+        "id": 89,
+        "EN": "Open in browser instead",
+        "DE": "Im Browser ansehen"
     }
 }

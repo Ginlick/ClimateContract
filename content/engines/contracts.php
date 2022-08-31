@@ -25,6 +25,28 @@ class contracts {
     $this->conn = $core->conn;
   }
 
+  function giveMain() {
+    $response = "";
+    $query = "SELECT * FROM contracts LIMIT 1";
+    if ($return = $this->conn->query($query)){
+      while ($row = $return->fetch_assoc()){
+        $contract = $this->parseContract($row);
+        $name = $contract["name"];
+        $files = $contract["files"];
+        if (count($files)<1){return "<p>".$this->core->giveWord(38)."</p>";}
+        $response .= "<div class='dlButtonCont'>";
+        foreach ($files as $filetype => $link){
+          $response .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $contract["id"]).'"><button class="button"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+        }
+        $response .= "</div>";
+        if (isset($files["pdf"])){
+          $response .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank">'.$this->core->giveWord(89).'</a>';
+        }
+      }
+    }
+
+    return $response;
+  }
   function giveAll() {
     $response = "";
     $query = "SELECT * FROM contracts";
