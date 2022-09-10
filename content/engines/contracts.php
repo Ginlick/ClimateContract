@@ -92,15 +92,24 @@ class contracts {
       if ($result = $this->conn->query($query)){
         $info["testimonials"] = mysqli_num_rows($result);
       }
+
+      $hasExtra = false;
       if (count($info)>0){
+        $hasExtra = true;
         $spacer = false; $description .= "<span class='info'>";
         foreach ($info as $key => $value){
           if ($spacer){$description .= " &#183; "; }else {$spacer = true;}
           $description .= $value." ".$key;
         }
-        $description .= "</span><br>";
+        $description .= "</span>";
+      }
+      if ($hasExtra){
+        $description .= "<br>";
       }
       $description .= $row["description"];
+      if ($row["articleLink"] != ""){
+        $description .= "<br><span><a href='".$this->giveArticleLink($row)."' target='_blank'>".$this->core->giveWord(92)."</a></span>";
+      }
 
       $contractStencil = str_replace("%%contract_img", $this->core->fetchFileUrl($row["img"], "thumbnail.png", 2), $contractStencil);
       $contractStencil = str_replace("%%contract_title", $name, $contractStencil);
@@ -125,5 +134,8 @@ class contracts {
     return $row;
   }
 
+  function giveArticleLink($contract){
+    return "/content/contracts/article/".$contract["id"]."_".$this->core->purate($contract["name"]);
+  }
 }
 ?>

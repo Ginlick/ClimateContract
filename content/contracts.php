@@ -67,6 +67,7 @@ $core->useContracts();
       color: var(--link-hover);
     }
 
+
     </style>
 </head>
 <body>
@@ -76,20 +77,21 @@ $core->useContracts();
         <section class="bigcircle">
           <div class="inner centered">
             <div class="incircle">
-              <h1><?php $core->printWord(86); ?></h2>
+                <h1><?php $core->printWord(86); ?></h2>
               <p><?php $core->printWord(87); ?></p>
               <div class="downloadercont">
                 <?php
                   echo $core->contracts->giveMain();
                 ?>
               </div>
+              <p><a href="#offer"><?php $core->printWord(90); ?></a></p>
             </div>
 
 
           </div>
         </section>
       </section>
-      <section class="textColumn">
+      <section class="textColumn" id="offer">
         <h2><?php $core->printWord(88); ?></h2>
         <p class="big-margin-bottom"><?php $core->printWord(27); ?></p>
         <?php

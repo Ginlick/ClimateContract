@@ -15,6 +15,7 @@
   --largecontentcolumn-width: min(80%, 1100px);
   --contentcolumn-width: min(80%, 800px);
   --base-font-size: 1.2em;
+  --text-font-size: 21px;
   --small-font-size: 0.9em;
   --base-font: "Ubuntu", sans-serif;
   --font-formal: Arial, Helvetica, sans-serif;
@@ -32,7 +33,13 @@ body {
   font-size: 1.35em;
   line-height: 1.5;
 
-  margin:0;width:100%;min-height:100%;
+  margin:0;min-height:100%;
+
+  width: 100vw;
+  overflow-x: hidden;
+}
+html {
+   scroll-behavior: smooth;
 }
 a, .fakelink {
   color: var(--link);
@@ -55,7 +62,7 @@ p a:hover {
 p, ul {
   line-height: 1.5;
   margin: 0.5em 0 1em;
-  font-size: 1em;
+  font-size: var(--text-font-size);
   color: var(--text-color);
   font-weight: 300;
 }
@@ -70,6 +77,13 @@ h3 {
   font-size: 1.3em;
   margin-bottom: 0.5em;
 }
+.titleBlock {
+  margin: 30px 0 45px;
+}
+.titleBlock h1, .titleBlock h2, .titleBlock h3 {
+  margin: 0;
+}
+
 .greenText {
   color: var(--link);
 }
@@ -320,6 +334,15 @@ input, textarea, select {
   .info {
     color: var(--border-color);
   }
+  .info.italiced {
+    font-style: italic;
+  }
+  .backA {
+    display: inline-block;
+    margin-bottom: 50px;
+    border-bottom: 1px dotted;
+    color: var(--border-color);
+  }
 
   /*imgConts*/
   .imgCont {
@@ -436,6 +459,7 @@ input, textarea, select {
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-top: 0.5em;
 }
 .squareCont::after {
   content: "";

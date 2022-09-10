@@ -8,6 +8,7 @@ RewriteRule ^[A-Za-z]{2}/(.*)$ /$1
 
 RewriteRule ^$ /home.php [L]
 RewriteRule ^(.*)/testimonials/post/([0-9]+)$ /content/testimonials/post.php?id=$2
+RewriteRule ^(.*)/contracts/article/(.+)$ $1/contracts/article.php?id=$2
 
 
 RewriteCond %{REQUEST_FILENAME} !-f

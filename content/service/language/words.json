@@ -71,8 +71,8 @@
     },
     "16": {
         "id": 16,
-        "EN": "Download a contract adapted to your needs from our <a href=\"/contracts\">selection</a>. You can choose from a variety of templates, including travel, clothing, electronic devices and more!",
-        "DE": "<a href=\"/contracts\">Wählt den Vertrag aus</a>, der am besten zu eurem Ziel passt, und ladet ihn herunter. Mit der Vielfalt an verfügbaren Verträgen können dein Vertragspartner und du euch für mehr Nachhaltigkeit in verschiedenen Lebensbereichen wie Reisen, Kleidung, elektronische Geräte und mehr einsetzen!"
+        "EN": "Download a contract adapted to your needs from our <a href=\"/contracts#offer\">selection</a>. You can choose from a variety of templates, including travel, clothing, electronic devices and more!",
+        "DE": "<a href=\"/contracts#offer\">Wählt den Vertrag aus</a>, der am besten zu eurem Ziel passt, und ladet ihn herunter. Mit der Vielfalt an verfügbaren Verträgen können dein Vertragspartner und du euch für mehr Nachhaltigkeit in verschiedenen Lebensbereichen wie Reisen, Kleidung, elektronische Geräte und mehr einsetzen!"
     },
     "17": {
         "id": 17,
@@ -422,7 +422,7 @@
     "87": {
         "id": 87,
         "EN": "Download the template contract in the format you wish.",
-        "DE": "Lade die Vertragsvorlage herunter."
+        "DE": "Ladet die Vertragsvorlage herunter."
     },
     "88": {
         "id": 88,
@@ -433,5 +433,30 @@
         "id": 89,
         "EN": "Open in browser instead",
         "DE": "Im Browser ansehen"
+    },
+    "90": {
+        "id": 90,
+        "EN": "View all contracts",
+        "DE": "Alle Verträge ansehen"
+    },
+    "91": {
+        "id": 91,
+        "EN": "Contracts",
+        "DE": "Verträge"
+    },
+    "92": {
+        "id": 92,
+        "EN": "Informative article",
+        "DE": "Informativer Artikel"
+    },
+    "93": {
+        "id": 93,
+        "EN": "Support us",
+        "DE": "Unterstütze uns"
+    },
+    "94": {
+        "id": 94,
+        "EN": "Support the Climate Contract Project",
+        "DE": "Unterstütze Climate Contract"
     }
 }

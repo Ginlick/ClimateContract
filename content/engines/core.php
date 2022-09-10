@@ -30,7 +30,15 @@ trait coreFunctions {
   }
   function go($place) {
     $this->killCache();
-    if (preg_match("/^\//", $place) AND isset($this->lang)){
+    if (gettype($place)=="integer"){
+      if ($place == 404 OR $place == 500){
+        $place = "/service/errors/$place";
+      }
+      else {
+        $place = "/service/errors/error";
+      }
+    }
+    else if (preg_match("/^\//", $place) AND isset($this->lang)){
       if (preg_match("/^\/[A-Za-z]{2}\/.*$/", $place)){
         $place = preg_replace("/^\/[A-Za-z]{2}\//", "/", $place);
       }
@@ -51,6 +59,7 @@ class core {
   public $domain = 1;
   public $projectName = "Climate Contract";
   public $extraModules = [];
+  public $textModules = [];
 
   public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-2","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts"], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
   public $langs = ["EN", "DE"];
@@ -179,19 +188,30 @@ class core {
   function printWord($id, $parseit = false){
     echo $this->giveWord($id, $parseit);
   }
-  function useText() {
+  function useText($mode = "text") {
     $this->launchParser();
-    $strJsonFileContents = file_get_contents($_SERVER['DOCUMENT_ROOT']."/service/language/text.json");
-    $this->textArr = json_decode(preg_replace('/[\x00-\x1F]/', '', $strJsonFileContents), true, 512, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-  }
-  function giveText($id) {
-    if (!isset($this->textArr)){$this->useText();}
-    if (isset($this->textArr[$id][$this->lang])){
-      $text = $this->textParse->parse($this->textArr[$id][$this->lang], 1);
-      if (preg_match_all("/^.*(\[word:([a-z0-9\-]+)\]).*$/m", $text, $lineMatches, PREG_PATTERN_ORDER) != false){$text = $this->textInsertWords($text, $lineMatches);}
-      return $text;
+    $url = $_SERVER['DOCUMENT_ROOT']."/service/language/text.json";
+    if ($mode == "article"){
+      $url = dirname(dirname($_SERVER['DOCUMENT_ROOT']))."/files/contracts/articles.json";
     }
-    return;
+    $strJsonFileContents = file_get_contents($url);
+    $newArr = json_decode(preg_replace('/[\x00-\x1F]/', '', $strJsonFileContents), true, 512, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    foreach ($newArr as $key => $value){
+      $this->textArr[$mode."-".$key] = $value;
+    }
+  }
+  function parseText($text) {
+    $text = $this->textParse->parse($text, 1);
+    if (preg_match_all("/^.*(\[word:([a-z0-9\-]+)\]).*$/m", $text, $lineMatches, PREG_PATTERN_ORDER) != false){$text = $this->textInsertWords($text, $lineMatches);}
+    return $text;
+  }
+  function giveText($id, $mode = "text") {
+    if (!in_array($mode, $this->textModules)){$this->useText($mode);}
+    $id = $mode."-".$id;
+    if (isset($this->textArr[$id][$this->lang])){
+      return $this->parseText($this->textArr[$id][$this->lang]);
+    }
+    return false;
   }
   function textInsertWords($text, $lineMatches){
     foreach ($lineMatches[1] as $key => $fullMatch){
@@ -201,8 +221,8 @@ class core {
     }
     return $text;
   }
-  function printText($id){
-    echo $this->giveText($id);
+  function printText($id, $mode = "text"){
+    echo $this->giveText($id, $mode);
   }
   function switchLang(string $wantlang){
     $wantlang = strtoupper($wantlang);
@@ -218,8 +238,8 @@ class core {
   function giveHtmlHeaders() {
     $headers = '
         <meta charset="UTF-8" />
-        <link rel="icon" href="/visuals/favicon.png">
-        <link rel="stylesheet" type="text/css" href="/styles/style.v2.css">
+        <link rel="icon" href="/visuals/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="/styles/style.v3.css">
         <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
         <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
         <link href="/assets/fontawesome/css/brands.css" rel="stylesheet">
@@ -285,14 +305,15 @@ class core {
         <div class="footerBlock">
           <h3>'.$this->giveWord(84).'</h3>
           <p>
-            <a href="/content/legal/impressum">'.$this->giveWord(80).'</a><br>
-            <a href="/content/legal/privacy">'.$this->giveWord(81).'</a>
+            <a href="/content/meta/impressum">'.$this->giveWord(80).'</a><br>
+            <a href="/content/meta/privacy">'.$this->giveWord(81).'</a><br>
+            <a href="/content/meta/support">'.$this->giveWord(93).'</a>
           </p>
         </div>
       </div>
       <div class="bottomFooter">
         <div class="flexer">
-          <p>© 2022 Green Youth Contract</p>
+          <p>© 2022 '.$this->giveWord(85).'</p>
         </div>
         <div class="flexer">
           <p><a href="https://github.com/Ginlick/ClimateContract" target="_blank">'.$this->giveWord(22).'</a><p>
