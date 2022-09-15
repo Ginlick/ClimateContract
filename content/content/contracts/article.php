@@ -32,7 +32,7 @@ if (!$articleText){
       <section class="textColumn-cont">
         <div class="textColumn">
           <div class="titleBlock">
-            <a class="backA" href="/contracts#offer"><i class="fa-solid fa-arrow-left"></i> <?php $core->printWord(91); ?></a>
+            <a class="backA greylink" href="/content/contracts/info"><i class="fa-solid fa-arrow-left"></i> <?php $core->printWord(91); ?></a>
 
             <h1><?php echo $contract["name"]; ?></h1>
             <span class="info italiced"><?php $core->printWord(92); ?></span><br>

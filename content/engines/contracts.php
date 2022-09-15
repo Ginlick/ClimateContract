@@ -26,33 +26,39 @@ class contracts {
   }
 
   function giveMain() {
-    $response = "";
+    $response = "<p>".$this->core->giveWord("e-1")."</p>";
     $query = "SELECT * FROM contracts LIMIT 1";
     if ($return = $this->conn->query($query)){
       while ($row = $return->fetch_assoc()){
-        $contract = $this->parseContract($row);
-        $name = $contract["name"];
-        $files = $contract["files"];
-        if (count($files)<1){return "<p>".$this->core->giveWord(38)."</p>";}
-        $response .= "<div class='dlButtonCont'>";
-        foreach ($files as $filetype => $link){
-          $response .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $contract["id"]).'"><button class="button"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
-        }
-        $response .= "</div>";
-        if (isset($files["pdf"])){
-          $response .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank">'.$this->core->giveWord(89).'</a>';
+        if ($contract = $this->parseContract($row)) {
+          $response = "";
+          $name = $contract["name"];
+          $files = $contract["files"];
+          if (count($files)<1){return "<p>".$this->core->giveWord(38)."</p>";}
+          $response .= "<div class='dlButtonCont'>";
+          foreach ($files as $filetype => $link){
+            $response .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $contract["id"]).'"><button class="button" onclick="downloadedC(\''.$this->giveArticleLink($contract).'\');"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+          }
+          $response .= "</div>";
+          if (isset($files["pdf"])){
+            $response .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank">'.$this->core->giveWord(89).'</a>';
+          }
         }
       }
     }
-
     return $response;
   }
-  function giveAll() {
+  function giveAll($type = "contracts") {
     $response = "";
     $query = "SELECT * FROM contracts";
     if ($return = $this->conn->query($query)){
       while ($row = $return->fetch_assoc()){
-        $response .= $this->giveOne($row);
+        if ($type == "articles"){
+          $response .= $this->giveOneArticle($row);
+        }
+        else if ($type == "contracts"){
+          $response .= $this->giveOne($row);
+        }
       }
     }
     if ($response == ""){
@@ -119,7 +125,7 @@ class contracts {
         $dlbutts .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank"><button class="button smal"><i class="fa-solid fa-arrow-up"></i>  view</button></a>';
       }
       foreach ($files as $filetype => $link){
-        $dlbutts .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $row["id"]).'"><button class="button smal"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
+        $dlbutts .= '<a href="'.$this->core->fetchFileUrl($link, $this->core->purate($name).".".$filetype, 1, $row["id"]).'"><button class="button smal"  onclick="downloadedC(\''.$this->giveArticleLink($row).'\');"><i class="fa-solid fa-arrow-down"></i> .'.$filetype.'</button></a>';
       }
       $contractStencil = str_replace("%%download_buttons", $dlbutts, $contractStencil);
       return $contractStencil;
@@ -129,11 +135,23 @@ class contracts {
   function parseContract($row){
     $files = json_decode($row["files"], true);
     if (isset($files[$this->core->lang])){$row["files"] = $files[$this->core->lang];} else {return false;}
-    $row["name"] = json_decode($row["name"], true)[$this->core->lang];
-    $row["description"] = json_decode($row["description"], true)[$this->core->lang];
+    $names = json_decode($row["name"], true);
+    if (isset($names[$this->core->lang])){$row["name"] = $names[$this->core->lang];} else {return false;}
+    $descriptions = json_decode($row["description"], true);
+    if (isset($descriptions[$this->core->lang])){$row["description"] = $descriptions[$this->core->lang];} else {$row["description"] = "";}
     return $row;
   }
 
+  function giveOneArticle($row) {
+    if ($row = $this->parseContract($row)) {
+      $return = "<li class='timeline-item'><div class='timeline-content'>";
+      $return .= "<h3>".$row["name"]."</h3>";
+      $return .= "<p>".$row["description"]."</p>";
+      $return .= "<a class='greylink' href='".$this->giveArticleLink($row)."'>".$this->core->giveWord("92-b")."</a>";
+      $return .= "</div><div class='timeline-bar'></div></li>";
+      return $return;
+    }
+  }
   function giveArticleLink($contract){
     return "/content/contracts/article/".$contract["id"]."_".$this->core->purate($contract["name"]);
   }

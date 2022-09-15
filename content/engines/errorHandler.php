@@ -7,6 +7,10 @@ class errorHandler {
 
   function __construct() {
     $this->setConn();
+
+    if (file_exists(dirname(dirname($_SERVER['DOCUMENT_ROOT']))."/files/test.txt")) {
+      $this->testMode = true;
+    }
   }
 
   function redirect($e) {

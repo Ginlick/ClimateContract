@@ -2,6 +2,7 @@
 require_once($_SERVER['DOCUMENT_ROOT']."/engines/core.php");
 $core = new core(2);
 $core->useContracts();
+$core->useAccounts();
  ?>﻿
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ $core->useContracts();
       position: relative;
       display: flex;
       justify-content: space-evenly;
+      overflow: hidden;
     }
 
     .bigcircle {
@@ -68,6 +70,8 @@ $core->useContracts();
     }
 
 
+
+
     </style>
 </head>
 <body>
@@ -97,14 +101,100 @@ $core->useContracts();
         <?php
           echo $core->contracts->giveAll();
         ?>
-      </section
-
+      </section>
     </section>
+
+    <?php
+      $submittable = false;
+      if (!$core->accounts->loggedIn OR !isset($core->accounts->loggedIn["settings"]["newsletter"]) OR $core->accounts->loggedIn["settings"]["newsletter"]!=1){
+        $email = "";
+        if ($core->accounts->loggedIn){$email = $core->accounts->loggedIn["email"];}
+
+        $text = '
+        <h2>'.$core->giveWord(97).'</h2>
+        <form id="cDownloadedForm">'.
+          $core->giveText("t-pop-cdl").$core->giveText("t-pop-cdln").'
+          <input oninput="checkCDownloadedForm(this);" style="margin-top: 10px" type="text" name="email" value="'.$email.'" placeholder="john.doe@hello.world"></input>
+          <p>'.$core->giveCookieDisclaimer(1).'</p>
+          <div class="block-button">
+            <button type="button" class="button grey" onclick=\'togglePop("cDownloaded")\'><i class="fa-solid fa-times"></i> '.$core->giveWord(98).'</button><button type="button" id="cDlFormButt" class="button dead" onclick="cDownloadedSubmit();">'.$core->giveWord(99).'</button>
+          </div>
+          <div class="fakep"><input type="checkbox" name="popup"></input><label>'.$core->giveWord(101).'</label></div>
+        </form>
+        ';
+      }
+      else {
+        $submittable = true;
+        $text = '
+        <h2>'.$core->giveWord(97).'</h2>
+        <form id="cDownloadedForm">'.
+          $core->giveText("t-pop-cdl").'
+          <p>'.$core->giveCookieDisclaimer(2).'</p>
+          <div class="block-button">
+            <button type="button" class="button grey" onclick=\'togglePop("cDownloaded")\'><i class="fa-solid fa-times"></i> '.$core->giveWord(98).'</button><button type="button" id="cDlFormButt" class="button" onclick="cDownloadedSubmit();">'.$core->giveWord(100).'</button>
+          </div>
+        <div class="fakep"><input type="checkbox" name="popup"></input><label>'.$core->giveWord(101).'</label></div>
+        </form>
+        ';
+      }
+
+          echo $core->givePopup($text, "cDownloaded");
+        ?>
+
+
   <?php echo $core->giveFooter(); ?>
 </body>
 </html>
 <?php echo $core->giveCorelinks(); ?>
 
 <script>
+var submittable = false;
+<?php if ($submittable){echo "submittable = true;";} ?>
+
+function downloadedC(articleLink) {
+  if (document.cookie.indexOf('showCDlPopup') == -1){
+    gimmeInfoLink = document.getElementById("gimmeInfolink");
+    if (gimmeInfoLink != null){gimmeInfoLink.setAttribute("href", articleLink);}
+    togglePop("cDownloaded");
+  }
+}
+function checkCDownloadedForm(emailInput) {
+  reg =  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (emailInput.value.toLowerCase().match(reg)){
+    submittable = true;
+    document.getElementById("cDlFormButt").classList.remove("dead");
+    emailInput.value = emailInput.value.toLowerCase();
+  }
+  else {
+    submittable = false;
+    document.getElementById("cDlFormButt").classList.add("dead");
+  }
+}
+function cDownloadedSubmit() {
+  if (!submittable){return;}
+  var form = document.getElementById("cDownloadedForm");
+  var formData = new FormData();
+  for (let element of form.elements){
+    if (element.getAttribute('type') === 'checkbox' && !element.checked){continue;}
+    formData.append(element.getAttribute("name"), element.value);
+  }
+  console.log(formData);
+
+  portal = "/service/account/cdlform.php";
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          let result = xhttp.responseText;
+          console.log(result);
+          if (result.includes("success")){
+            form.reset();
+            togglePop("cDownloaded");
+          }
+      }
+  };
+  xhttp.open("POST", portal, true);
+  xhttp.send(formData);
+}
 
 </script>

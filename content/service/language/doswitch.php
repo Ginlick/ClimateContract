@@ -1,7 +1,11 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/engines/core.php");
 $core = new core;
-$urllang = strtolower($core->lang);
+$urllang = $core->lang;
+
+if (!isset($_GET["accept"])){
+  $core->acceptCookies();
+}
 
 if (!isset($_GET["tl"]) || $_GET["tl"] == $core->lang){
   $core->go("/$urllang/home");

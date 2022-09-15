@@ -1,462 +1,587 @@
 {
     "1": {
         "id": 1,
-        "EN": "Home",
-        "DE": "Home"
+        "en": "Home",
+        "de": "Home"
     },
-    "1-2": {
-        "id": "1-2",
-        "EN": "Concept",
-        "DE": "Konzept"
+    "1-1": {
+        "id": "1-1",
+        "en": "Concept",
+        "de": "Konzept"
     },
     "2": {
         "id": 2,
-        "EN": "Download Contract",
-        "DE": "Verträge"
+        "en": "Download Contract",
+        "de": "Verträge"
+    },
+    "2-1": {
+        "id": "2-1",
+        "en": "Information",
+        "de": "Information"
+    },
+    "2-2": {
+        "id": "2-2",
+        "en": "Further Engagement",
+        "de": "Weiter Engagieren"
     },
     "3": {
         "id": 3,
-        "EN": "Testimonials",
-        "DE": "Erfahrungen"
+        "en": "Testimonials",
+        "de": "Erfahrungen"
     },
     "4": {
         "id": 4,
-        "EN": "Climate Contract logo",
-        "DE": "Climate Contract logo"
+        "en": "Climate Contract logo",
+        "de": "Climate Contract logo"
     },
     "5": {
         "id": 5,
-        "EN": "Connect generations and encourage sustainability.",
-        "DE": "Generationen verbinden und Nachhaltigkeit fördern."
+        "en": "Connect generations and encourage sustainability.",
+        "de": "Generationen verbinden und Nachhaltigkeit fördern."
     },
     "6": {
         "id": 6,
-        "EN": "Students and sponsors sign a contract together guaranteeing financial support for the extra costs of sustainable behavior. This enables young people to lead a more sustainable lifestyle and offers an opportunity for sponsors to make climate-friendly investments. \n\nWould you like to support young people in their climate-friendly lifestyle? \nWhy don't you suggest your daughter or nephew to sign a contract together?   \n\nAre you planning a train journey or just can't afford clothes from sustainable labels? \nAsk a sponsor to sign a contract together!",
-        "DE": "Schüler und Sponsoren unterzeichnen gemeinsam einen Vertrag, der  eine finanzielle Unterstützung für die Mehrkosten eines nachhaltigen Verhaltens garantiert. Dies ermöglicht es jungen Menschen, einen nachhaltigeren Lebensstil zu führen, und gleichzeitig bietet der Climate Contract eine Möglichkeit für Sponsoren, klimafreundliche Investitionen zu fördern. \n\nMöchten Sie junge Menschen in ihrem klimafreundlichen Lebensstil unterstützen?\nSchlagen Sie doch Ihrer Tochter oder Ihrem Neffen vor, gemeinsam einen Vertrag zu unterschreiben!\n\nPlanst du eine Zugreise oder kannst du dir  Kleidung von nachhaltigen Labels einfach nicht leisten? \nFrage einen Sponsor an, um gemeinsam einen Vertrag zu unterzeichnen!"
+        "en": "Students and sponsors sign a contract together guaranteeing financial support for the extra costs of sustainable behavior. This enables young people to lead a more sustainable lifestyle and offers an opportunity for sponsors to make climate-friendly investments. \n\nWould you like to support young people in their climate-friendly lifestyle? \nWhy don't you suggest your daughter or nephew to sign a contract together?   \n\nAre you planning a train journey or just can't afford clothes from sustainable labels? \nAsk a sponsor to sign a contract together!",
+        "de": "Schüler und Sponsoren unterzeichnen gemeinsam einen Vertrag, der  eine finanzielle Unterstützung für die Mehrkosten eines nachhaltigen Verhaltens garantiert. Dies ermöglicht es jungen Menschen, einen nachhaltigeren Lebensstil zu führen, und gleichzeitig bietet der Climate Contract eine Möglichkeit für Sponsoren, klimafreundliche Investitionen zu fördern. \n\nMöchten Sie junge Menschen in ihrem klimafreundlichen Lebensstil unterstützen?\nSchlagen Sie doch Ihrer Tochter oder Ihrem Neffen vor, gemeinsam einen Vertrag zu unterschreiben!\n\nPlanst du eine Zugreise oder kannst du dir  Kleidung von nachhaltigen Labels einfach nicht leisten? \nFrage einen Sponsor an, um gemeinsam einen Vertrag zu unterzeichnen!"
     },
     "7": {
         "id": 7,
-        "EN": "<a href=\"/contracts\">Download a contract</a> today!",
-        "DE": "Hier <a href=\"/contracts\">Vertrag herunterladen</a>."
+        "en": "<a href=\"/contracts\">Download a contract</a> today!",
+        "de": "Hier <a href=\"/contracts\">Vertrag herunterladen</a>."
     },
     "10": {
         "id": 10,
-        "EN": "Download. Edit. Sign. Done!",
-        "DE": "Herunterladen. Anpassen. Unterschreiben. Fertig!"
+        "en": "Download. Edit. Sign. Done!",
+        "de": "Herunterladen. Anpassen. Unterschreiben. Fertig!"
     },
     "11": {
         "id": 11,
-        "EN": "How to make a contract",
-        "DE": "Wie funktioniert ein Climate Contract?"
+        "en": "How to make a contract",
+        "de": "Wie funktioniert ein Climate Contract?"
     },
     "12": {
         "id": 12,
-        "EN": "More questions?",
-        "DE": "Weitere Fragen?"
+        "en": "More questions?",
+        "de": "Weitere Fragen?"
     },
     "13": {
         "id": 13,
-        "EN": "1. Choose Template",
-        "DE": "1. Vorlage auswählen"
+        "en": "1. Choose Template",
+        "de": "1. Vorlage auswählen"
     },
     "14": {
         "id": 14,
-        "EN": "2. Edit",
-        "DE": "2. Anpassen"
+        "en": "2. Edit",
+        "de": "2. Anpassen"
     },
     "15": {
         "id": 15,
-        "EN": "3. Sign",
-        "DE": "3. Unterschreiben"
+        "en": "3. Sign",
+        "de": "3. Unterschreiben"
     },
     "16": {
         "id": 16,
-        "EN": "Download a contract adapted to your needs from our <a href=\"/contracts#offer\">selection</a>. You can choose from a variety of templates, including travel, clothing, electronic devices and more!",
-        "DE": "<a href=\"/contracts#offer\">Wählt den Vertrag aus</a>, der am besten zu eurem Ziel passt, und ladet ihn herunter. Mit der Vielfalt an verfügbaren Verträgen können dein Vertragspartner und du euch für mehr Nachhaltigkeit in verschiedenen Lebensbereichen wie Reisen, Kleidung, elektronische Geräte und mehr einsetzen!"
+        "en": "Download a contract adapted to your needs from our <a href=\"/contracts#offer\">selection</a>. You can choose from a variety of templates, including travel, clothing, electronic devices and more!",
+        "de": "<a href=\"/contracts#offer\">Wählt den Vertrag aus</a>, der am besten zu eurem Ziel passt, und ladet ihn herunter. Mit der Vielfalt an verfügbaren Verträgen können dein Vertragspartner und du euch für mehr Nachhaltigkeit in verschiedenen Lebensbereichen wie Reisen, Kleidung, elektronische Geräte und mehr einsetzen!"
     },
     "17": {
         "id": 17,
-        "EN": "If you wish, you can customize the contract. Change the validity period, improve the conditions, or expand its scope as you please! The contracts are templates, not fixed rules.",
-        "DE": "Wenn ihr möchtet, könnt ihr den Vertrag individuell gestalten. Passt die Gültigkeitsdauer an, verändert die Bedingungen oder erweitert den Geltungsbereich, wie ihr möchtet! Die Verträge sind Vorlagen, keine festen Regeln."
+        "en": "If you wish, you can customize the contract. Change the validity period, improve the conditions, or expand its scope as you please! The contracts are templates, not fixed rules.",
+        "de": "Wenn ihr möchtet, könnt ihr den Vertrag individuell gestalten. Passt die Gültigkeitsdauer an, verändert die Bedingungen oder erweitert den Geltungsbereich, wie ihr möchtet! Die Verträge sind Vorlagen, keine festen Regeln."
     },
     "18": {
         "id": 18,
-        "EN": "Sign the final contract. Make sure you both understand the commitment you take on with this contract as well as new exciting opportunities it enables. Your climate-friendly behavior is what counts – after all, money is not everything!",
-        "DE": "Unterzeichnet den endgültigen Vertrag. Vergewissert euch, dass ihr beide die Verpflichtung, die ihr mit diesem Vertrag eingeht, sowie die neuen, spannenden Möglichkeiten, die er bietet, versteht. Was zählt, ist euer klimafreundliches Verhalten - Geld ist schließlich nicht alles!"
+        "en": "Sign the final contract. Make sure you both understand the commitment you take on with this contract as well as new exciting opportunities it enables. Your climate-friendly behavior is what counts – after all, money is not everything!",
+        "de": "Unterzeichnet den endgültigen Vertrag. Vergewissert euch, dass ihr beide die Verpflichtung, die ihr mit diesem Vertrag eingeht, sowie die neuen, spannenden Möglichkeiten, die er bietet, versteht. Was zählt, ist euer klimafreundliches Verhalten - Geld ist schließlich nicht alles!"
     },
     "19": {
         "id": 19,
-        "EN": "If you've still got questions, or want to know more about the concept of Climate Contract, you can <a href=\"/content/home/info\">learn more here</a>.",
-        "DE": "Wenn ihr noch Fragen habt oder mehr über Climate Contract wissen möchtet, könnt ihr <a href=\"/content/home/info\">hier mehr erfahren</a>."
+        "en": "If you've still got questions, or want to know more about the concept of Climate Contract, you can <a href=\"/content/home/info\">learn more here</a>.",
+        "de": "Wenn ihr noch Fragen habt oder mehr über Climate Contract wissen möchtet, könnt ihr <a href=\"/content/home/info\">hier mehr erfahren</a>."
     },
     "20": {
         "id": 20,
-        "EN": "Contact",
-        "DE": "Kontakt"
+        "en": "Contact",
+        "de": "Kontakt"
     },
     "21": {
         "id": 21,
-        "EN": "admin@climatecontract.org",
-        "DE": "admin@climatecontract.org"
+        "en": "admin@climatecontract.org",
+        "de": "admin@climatecontract.org"
     },
     "22": {
         "id": 22,
-        "EN": "Source Code",
-        "DE": "Quellcode"
+        "en": "Source Code",
+        "de": "Quellcode"
     },
     "23": {
         "id": 23,
-        "EN": "https://climatecontract.org",
-        "DE": "https://climatecontract.org"
+        "en": "https://climatecontract.org",
+        "de": "https://climatecontract.org"
     },
     "24": {
         "id": 24,
-        "EN": "Check out Climate Contract!",
-        "DE": "Entdecke Climate Contract!"
+        "en": "Check out Climate Contract!",
+        "de": "Entdecke Climate Contract!"
     },
     "25": {
         "id": 25,
-        "EN": "climatecrisis,climatecontract",
-        "DE": "climatecrisis,climatecontract"
+        "en": "climatecrisis,climatecontract",
+        "de": "climatecrisis,climatecontract"
     },
     "26": {
         "id": 26,
-        "EN": "Download Contracts",
-        "DE": "Verträge Herunterladen"
+        "en": "Download Contracts",
+        "de": "Verträge Herunterladen"
     },
     "27": {
         "id": 27,
-        "EN": "Choose the contract template that best fits your goals.<br>Feel free to adapt it even further!",
-        "DE": "Wählt die Vertragsvorlage, die am besten zu eurem Ziel passt.<br> Ihr könnt die Vorlage nach Belieben weiter bearbeiten und an eure Bedürfnisse anpassen!"
+        "en": "Choose the contract template that best fits your goals.<br>Feel free to adapt it even further!",
+        "de": "Wählt die Vertragsvorlage, die am besten zu eurem Ziel passt.<br> Ihr könnt die Vorlage nach Belieben weiter bearbeiten und an eure Bedürfnisse anpassen!"
     },
     "28": {
         "id": 28,
-        "EN": "Switch Language",
-        "DE": "Sprache Wechseln"
+        "en": "Switch Language",
+        "de": "Sprache Wechseln"
     },
     "29": {
         "id": 29,
-        "EN": "To save your language preference, we need to set 1 cookie.",
-        "DE": "Um deine Sprachwahl zu speichern, müssen wir 1 Cookie einsetzen."
+        "en": "To save your language preference, we need to set 1 cookie.",
+        "de": "Um deine Sprachwahl zu speichern, müssen wir 1 Cookie einsetzen."
     },
     "30": {
         "id": 30,
-        "EN": "Accept and continue",
-        "DE": "Akzeptieren"
+        "en": "Accept and continue",
+        "de": "Akzeptieren"
     },
     "31": {
         "id": 31,
-        "EN": "404. Page not found.",
-        "DE": "404. Seite nicht gefunden."
-    },
-    "32": {
-        "id": 32,
-        "EN": "Sorry, but the page you're looking for can't be found.",
-        "DE": "Die Seite, die Sie aufgesucht haben, konnte nicht gefunden werden."
+        "en": "404. Page not found.",
+        "de": "404. Seite nicht gefunden."
     },
     "33": {
         "id": 33,
-        "EN": "Home",
-        "DE": "Home"
+        "en": "Home",
+        "de": "Home"
     },
     "34": {
         "id": 34,
-        "EN": "Oops! There's been an error.",
-        "DE": "Ups! Ein Fehler ist aufgetreten."
+        "en": "Oops! There's been an error.",
+        "de": "Ups! Ein Fehler ist aufgetreten."
     },
     "35": {
         "id": 35,
-        "EN": "The issue has been logged, and the administrator notified.",
-        "DE": "Das Problem wurde protokolliert, und der administrator wurde benachrichtigt."
+        "en": "The issue has been logged, and the administrator notified.",
+        "de": "Das Problem wurde protokolliert, und der administrator wurde benachrichtigt."
     },
     "36": {
         "id": 36,
-        "EN": "500. Server error.",
-        "DE": "500. Serverfehler."
+        "en": "500. Server error.",
+        "de": "500. Serverfehler."
+    },
+    "32": {
+        "id": 32,
+        "en": "Sorry, but the page you're looking for can't be found.",
+        "de": "Die Seite, die Sie aufgesucht haben, konnte nicht gefunden werden."
     },
     "37": {
         "id": 37,
-        "EN": "Sorry, the server encountered an unexpected condition.",
-        "DE": "Der Server ist auf eine unerwartete Bedingung gestoßen."
+        "en": "Sorry, the server encountered an unexpected condition.",
+        "de": "Der Server ist auf eine unerwartete Bedingung gestoßen."
     },
     "38": {
         "id": 38,
-        "EN": "Sorry, there are no contracts in your language yet.",
-        "DE": "Es gibt noch keine Verträge in dieser Sprache."
+        "en": "Sorry, there are no contracts in your language yet.",
+        "de": "Es gibt noch keine Verträge in dieser Sprache."
+    },
+    "e-1": {
+        "id": "e-1",
+        "en": "Sorry, no contract was found.",
+        "de": "Es wurden keine Verträge gefunden."
     },
     "39": {
         "id": 39,
-        "EN": "Testimonials",
-        "DE": "Erfahrungen"
+        "en": "Testimonials",
+        "de": "Erfahrungen"
     },
     "40": {
         "id": 40,
-        "EN": "Share your experiences with other users!",
-        "DE": "Teile deine Erfahrungen mit anderen Nutzern!"
+        "en": "Share your experiences with other users!",
+        "de": "Teile deine Erfahrungen mit anderen Nutzern!"
     },
     "41": {
         "id": 41,
-        "EN": "Write Testimonial",
-        "DE": "Erfahrung Schreiben"
+        "en": "Write Testimonial",
+        "de": "Erfahrung Schreiben"
     },
     "42": {
         "id": 42,
-        "EN": "Write Testimonial",
-        "DE": "Erfahrung Schreiben"
+        "en": "Write Testimonial",
+        "de": "Erfahrung Schreiben"
     },
     "43": {
         "id": 43,
-        "EN": "Tell people what you thought about downloading your contract!",
-        "DE": "Teil anderen mit, wie deine Climate Contract-Erfahrungen waren!"
+        "en": "Tell people what you thought about downloading your contract!",
+        "de": "Teil anderen mit, wie deine Climate Contract-Erfahrungen waren!"
     },
     "44": {
         "id": 44,
-        "EN": "Names",
-        "DE": "Namen"
+        "en": "Names",
+        "de": "Namen"
     },
     "45": {
         "id": 45,
-        "EN": "Joanna and her daughter",
-        "DE": "Joanna und ihre Tochter"
+        "en": "Joanna and her daughter",
+        "de": "Joanna und ihre Tochter"
     },
     "46": {
         "id": 46,
-        "EN": "Who you are (please don't use your full real name).",
-        "DE": "Wer Sie sind (bitte nicht den ganzen echten Namen brauchen)."
+        "en": "Who you are (please don't use your full real name).",
+        "de": "Wer Sie sind (bitte nicht den ganzen echten Namen brauchen)."
     },
     "47": {
         "id": 47,
-        "EN": "Contract Chosen",
-        "DE": "Gewählter Vertrag"
+        "en": "Contract Chosen",
+        "de": "Gewählter Vertrag"
     },
     "48": {
         "id": 48,
-        "EN": "Choose the contract you used.",
-        "DE": "Wählen Sie den Vertrag, den Sie gebraucht haben."
+        "en": "Choose the contract you used.",
+        "de": "Wählen Sie den Vertrag, den Sie gebraucht haben."
     },
     "49": {
         "id": 49,
-        "EN": "Your Experience",
-        "DE": "Ihre Erfahrung"
+        "en": "Your Experience",
+        "de": "Ihre Erfahrung"
     },
     "50": {
         "id": 50,
-        "EN": "My daughter and I are quite worried about the effects of climate change, and the Sustainable Travel Contract helped us to...",
-        "DE": "Meine Tochter und ich sind sehr besorgt über die Auswirkungen des Klimawandels, und der Vertrag über nachhaltiges Reisen hat uns geholfen,..."
+        "en": "My daughter and I are quite worried about the effects of climate change, and the Sustainable Travel Contract helped us to...",
+        "de": "Meine Tochter und ich sind sehr besorgt über die Auswirkungen des Klimawandels, und der Vertrag über nachhaltiges Reisen hat uns geholfen,..."
     },
     "51": {
         "id": 51,
-        "EN": "Write a short text about your thoughts when downloading/editing the contract, and initial experiences.",
-        "DE": "Schreiben Sie einen kurzen Text über Ihre Gedanken beim Herunterladen/Bearbeiten des Vertrags, sowie Ihre ersten Erfahrungen."
+        "en": "Write a short text about your thoughts when downloading/editing the contract, and initial experiences.",
+        "de": "Schreiben Sie einen kurzen Text über Ihre Gedanken beim Herunterladen/Bearbeiten des Vertrags, sowie Ihre ersten Erfahrungen."
     },
     "52": {
         "id": 52,
-        "EN": "Submit",
-        "DE": "Publizieren"
+        "en": "Submit",
+        "de": "Publizieren"
     },
     "53": {
         "id": 53,
-        "EN": "Error: Possible fraud detected. Please try again.",
-        "DE": "Fehler: Möglicher Betrug entdeckt. Bitte versuchen Sie es erneut."
+        "en": "Error: Possible fraud detected. Please try again.",
+        "de": "Fehler: Möglicher Betrug entdeckt. Bitte versuchen Sie es erneut."
     },
     "54": {
         "id": 54,
-        "EN": "Error: Incorrect input.",
-        "DE": "Fehler: Falsche Eingabe."
+        "en": "Error: Incorrect input.",
+        "de": "Fehler: Falsche Eingabe."
     },
     "55": {
         "id": 55,
-        "EN": "Error: An error occurred.",
-        "DE": "Fehler: Es ist ein Fehler aufgetreten."
+        "en": "Error: An error occurred.",
+        "de": "Fehler: Es ist ein Fehler aufgetreten."
     },
     "56": {
         "id": 56,
-        "EN": "Cancel",
-        "DE": "Abbrechen"
+        "en": "Cancel",
+        "de": "Abbrechen"
     },
     "57": {
         "id": 57,
-        "EN": "Project Manager",
-        "DE": "Projektleiterin"
+        "en": "Project Manager",
+        "de": "Projektleiterin"
     },
     "58": {
         "id": 58,
-        "EN": "Project Manager",
-        "DE": "Projektleiter"
+        "en": "Project Manager",
+        "de": "Projektleiter"
     },
     "59": {
         "id": 59,
-        "EN": "Check out this Climate Contract testimonial!",
-        "DE": "Sehen Sie sich diesen Climate Contract Erfahrungsbericht an!"
+        "en": "Check out this Climate Contract testimonial!",
+        "de": "Sehen Sie sich diesen Climate Contract Erfahrungsbericht an!"
     },
     "60": {
         "id": 60,
-        "EN": "",
-        "DE": "vor"
+        "en": "",
+        "de": "vor"
     },
     "61": {
         "id": 61,
-        "EN": "ago",
-        "DE": ""
+        "en": "ago",
+        "de": ""
     },
     "62": {
         "id": 62,
-        "EN": "year",
-        "DE": "Jahr"
+        "en": "year",
+        "de": "Jahr"
     },
     "63": {
         "id": 63,
-        "EN": "years",
-        "DE": "Jahren"
+        "en": "years",
+        "de": "Jahren"
     },
     "64": {
         "id": 64,
-        "EN": "month",
-        "DE": "Monat"
+        "en": "month",
+        "de": "Monat"
     },
     "65": {
         "id": 65,
-        "EN": "months",
-        "DE": "Monaten"
+        "en": "months",
+        "de": "Monaten"
     },
     "66": {
         "id": 66,
-        "EN": "week",
-        "DE": "Woche"
+        "en": "week",
+        "de": "Woche"
     },
     "67": {
         "id": 67,
-        "EN": "weeks",
-        "DE": "Wochen"
+        "en": "weeks",
+        "de": "Wochen"
     },
     "68": {
         "id": 68,
-        "EN": "day",
-        "DE": "Tag"
+        "en": "day",
+        "de": "Tag"
     },
     "69": {
         "id": 69,
-        "EN": "days",
-        "DE": "Tagen"
+        "en": "days",
+        "de": "Tagen"
     },
     "70": {
         "id": 70,
-        "EN": "hour",
-        "DE": "Stunde"
+        "en": "hour",
+        "de": "Stunde"
     },
     "71": {
         "id": 71,
-        "EN": "hours",
-        "DE": "Stunden"
+        "en": "hours",
+        "de": "Stunden"
     },
     "72": {
         "id": 72,
-        "EN": "minute",
-        "DE": "Minute"
+        "en": "minute",
+        "de": "Minute"
     },
     "73": {
         "id": 73,
-        "EN": "minutes",
-        "DE": "Minuten"
+        "en": "minutes",
+        "de": "Minuten"
     },
     "74": {
         "id": 74,
-        "EN": "Just Posted",
-        "DE": "Gerade Eben"
+        "en": "Just Posted",
+        "de": "Gerade Eben"
     },
     "75": {
         "id": 75,
-        "EN": "Testimonial by",
-        "DE": "Erfahrung von"
+        "en": "Testimonial by",
+        "de": "Erfahrung von"
     },
     "76": {
         "id": 76,
-        "EN": "Want to share your own experiences?",
-        "DE": "Möchten Sie Ihre eigenen Erfahrungen teilen?"
+        "en": "Want to share your own experiences?",
+        "de": "Möchten Sie Ihre eigenen Erfahrungen teilen?"
     },
     "77": {
         "id": 77,
-        "EN": "Explore all testimonials",
-        "DE": "Weitere Erfahrungen entdecken"
+        "en": "Explore all testimonials",
+        "de": "Weitere Erfahrungen entdecken"
     },
     "79": {
         "id": 79,
-        "EN": "Our Concept",
-        "DE": "Unser Konzept"
+        "en": "Our Concept",
+        "de": "Unser Konzept"
     },
     "80": {
         "id": 80,
-        "EN": "About us",
-        "DE": "Impressum"
+        "en": "About us",
+        "de": "Impressum"
     },
     "81": {
         "id": 81,
-        "EN": "Privacy",
-        "DE": "Datenschutz"
+        "en": "Privacy",
+        "de": "Datenschutz"
     },
     "82": {
         "id": 82,
-        "EN": "About us",
-        "DE": "Impressum"
+        "en": "About us",
+        "de": "Impressum"
     },
     "83": {
         "id": 83,
-        "EN": "Privacy Policy",
-        "DE": "Datenschutzerklärung"
+        "en": "Privacy Policy",
+        "de": "Datenschutzerklärung"
     },
     "84": {
         "id": 84,
-        "EN": "Links",
-        "DE": "Links"
+        "en": "Links",
+        "de": "Links"
     },
     "85": {
         "id": 85,
-        "EN": "Climate Contract",
-        "DE": "Climate Contract"
+        "en": "Climate Contract",
+        "de": "Climate Contract"
     },
     "86": {
         "id": 86,
-        "EN": "Let's get going!",
-        "DE": "Los geht's!"
+        "en": "Let's get going!",
+        "de": "Los geht's!"
     },
     "87": {
         "id": 87,
-        "EN": "Download the template contract in the format you wish.",
-        "DE": "Ladet die Vertragsvorlage herunter."
+        "en": "Download the template contract in the format you wish.",
+        "de": "Ladet die Vertragsvorlage herunter."
     },
     "88": {
         "id": 88,
-        "EN": "All Contracts",
-        "DE": "Alle Verträge"
+        "en": "All Contracts",
+        "de": "Alle Verträge"
     },
     "89": {
         "id": 89,
-        "EN": "Open in browser instead",
-        "DE": "Im Browser ansehen"
+        "en": "Open in browser instead",
+        "de": "Im Browser ansehen"
     },
     "90": {
         "id": 90,
-        "EN": "View all contracts",
-        "DE": "Alle Verträge ansehen"
+        "en": "View all contracts",
+        "de": "Alle Verträge ansehen"
     },
     "91": {
         "id": 91,
-        "EN": "Contracts",
-        "DE": "Verträge"
+        "en": "Contracts",
+        "de": "Verträge"
     },
     "92": {
         "id": 92,
-        "EN": "Informative article",
-        "DE": "Informativer Artikel"
+        "en": "Informative article",
+        "de": "Informativer Artikel"
+    },
+    "92-b": {
+        "id": "92-b",
+        "en": "View article",
+        "de": "Artikel ansehen"
     },
     "93": {
         "id": 93,
-        "EN": "Support us",
-        "DE": "Unterstütze uns"
+        "en": "Support us",
+        "de": "Unterstütze uns"
     },
     "94": {
         "id": 94,
-        "EN": "Support the Climate Contract Project",
-        "DE": "Unterstütze Climate Contract"
+        "en": "Support the Climate Contract Project",
+        "de": "Unterstütze Climate Contract"
+    },
+    "95": {
+        "id": 95,
+        "en": "Information",
+        "de": "Information"
+    },
+    "96": {
+        "id": 96,
+        "en": "Climate Engagement",
+        "de": "Sich weiter fürs Klima engagieren"
+    },
+    "97": {
+        "id": 97,
+        "en": "Contract Downloaded",
+        "de": ""
+    },
+    "98": {
+        "id": 98,
+        "en": "Close",
+        "de": ""
+    },
+    "99": {
+        "id": 99,
+        "en": "Submit",
+        "de": ""
+    },
+    "100": {
+        "id": 100,
+        "en": "Ok",
+        "de": ""
+    },
+    "101": {
+        "id": 101,
+        "en": "Don't show this popup again",
+        "de": ""
+    },
+    "102-1": {
+        "id": "102-1",
+        "en": "You accept my fricking cookies",
+        "de": ""
+    },
+    "102-2": {
+        "id": "102-2",
+        "en": "",
+        "de": ""
+    },
+    "104": {
+        "id": 104,
+        "en": "",
+        "de": ""
+    },
+    "105": {
+        "id": 105,
+        "en": "",
+        "de": ""
+    },
+    "106": {
+        "id": 106,
+        "en": "",
+        "de": ""
+    },
+    "107": {
+        "id": 107,
+        "en": "",
+        "de": ""
+    },
+    "108": {
+        "id": 108,
+        "en": "",
+        "de": ""
+    },
+    "109": {
+        "id": 109,
+        "en": "",
+        "de": ""
+    },
+    "110": {
+        "id": 110,
+        "en": "",
+        "de": ""
+    },
+    "111": {
+        "id": 111,
+        "en": "",
+        "de": ""
+    },
+    "112": {
+        "id": 112,
+        "en": "",
+        "de": ""
+    },
+    "113": {
+        "id": 113,
+        "en": "",
+        "de": ""
+    },
+    "114": {
+        "id": 114,
+        "en": "",
+        "de": ""
+    },
+    "115": {
+        "id": 115,
+        "en": "",
+        "de": ""
     }
 }

@@ -55,14 +55,15 @@ require_once($_SERVER['DOCUMENT_ROOT']."/engines/errorHandler.php");
 
 class core {
   use coreFunctions;
-  public $lang = "DE";
+  public $lang = "de";
   public $domain = 1;
   public $projectName = "Climate Contract";
   public $extraModules = [];
   public $textModules = [];
+  public $cookiesA = false;
 
-  public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-2","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts"], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
-  public $langs = ["EN", "DE"];
+  public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-1","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts", "tabs"=>[["name"=>"2-1","href"=>"/content/contracts/info"], ["name"=>"2-2","href"=>"/content/contracts/engage"]]], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
+  public $langs = ["en", "de"];
   public $regArrayR = [
     "basic" => "/[^A-Za-z0-9_]/",
     "number" => "/[^0-9]/",
@@ -73,8 +74,12 @@ class core {
 
   function __construct($domain = 0) {
     $this->setConn();
-
     $this->domain = $domain;
+
+    if (isset($_COOKIE["cookiesA"])){
+      $this->cookiesA = true;
+    }
+
     if (isset($_COOKIE["lang"])){
       if (in_array($_COOKIE["lang"], $this->langs)){
         $this->lang = $_COOKIE["lang"];
@@ -107,6 +112,10 @@ class core {
     $this->useContracts(); $this->parse = $this->useParser();
     return new blogEngine($this);
   }
+  function useAccounts() {
+    require_once($_SERVER['DOCUMENT_ROOT']."/engines/accounts.php");
+    $this->accounts = new accounts($this);
+  }
 
 
   function giveHeader() {
@@ -114,9 +123,9 @@ class core {
     <header class="header">
       <div class="header-wrapper">
         <div class="logo-bigcont">
-          <a href="'.$this->urllang.'/home">
+          <a href="'.$this->urllang.'/home?test">
             <div class="logo-cont">
-              <img src="/visuals/logo.png" alt="'.$this->giveWord(4).'"/>
+              <img src="/visuals/CC test.png" alt="'.$this->giveWord(4).'"/>
             </div>
           </a>
         </div>
@@ -131,7 +140,7 @@ class core {
     foreach ($this->langs as $langcode) {
       if ($langcode == $this->lang){continue;}
       if ($did){$return .= ' | ';}else{$did = true;}
-      $return .= '<a href="/service/language/switch?tl='.$langcode.'&return='.$_SERVER['REQUEST_URI'].'">'.$langcode.'</a>';
+      $return .= '<a href="/service/language/switch?tl='.$langcode.'&return='.$_SERVER['REQUEST_URI'].'">'.strtoupper($langcode).'</a>';
     }
         $return .=  '  </p>
           </div>
@@ -225,13 +234,25 @@ class core {
     echo $this->giveText($id, $mode);
   }
   function switchLang(string $wantlang){
-    $wantlang = strtoupper($wantlang);
     if (in_array($wantlang, $this->langs)){
       $this->lang = $wantlang;
-      setcookie("lang", $wantlang, time()+57820000, "/");
+      if ($this->cookiesA){
+        setcookie("lang", $wantlang, time()+57820000, "/");
+      }
       return true;
     }
     return false;
+  }
+  function acceptCookies() {
+    setcookie("cookiesA", "1", 0, "/");
+    $this->cookiesA = true;
+  }
+  function giveCookieDisclaimer($option = 1){
+    $wordId = "102-".$option;
+    if (!$this->cookiesA){
+      return $this->giveWord($wordId);
+    }
+    return "";
   }
 
   //gives
@@ -273,7 +294,6 @@ class core {
       for (let link of allLinks){
         let linktext = link.getAttribute("href");
         if (typeof(linktext) == "string" && linktext.match(/^\//)){
-          console.log(linktext);
           if (linktext.match(/^\/[A-Za-z]{2}\/.*$/)){
             linktext = linktext.replace(/^\/[A-Za-z]{2}\//, "/");
           }
@@ -327,6 +347,24 @@ class core {
       </div>
     </footer>
     ';
+  }
+  function givePopup($text, $name, $specials = "") {
+    //        <div class="shader-closer" onclick="togglePop(\''.$name.'\')"></div>
+    // can't get popup to block closer
+    if ($specials == "test"){$inset = 'test';}
+
+    $return = '
+      <div class="shader" id="'.$name.'">
+        <div class="popup '.$inset.'">
+          <i class="popup-closer fakelink fa-solid fa-times" onclick="togglePop(\''.$name.'\')"></i>
+          <div class="circle-cont">
+            <img class="circle-img" src="/visuals/bigfavicon.png" alt="'.$this->giveWord(4).'" />
+          </div>
+          '.$text.'
+        </div>
+      </div>
+    ';
+    return $return;
   }
 
   //miscellaneous
