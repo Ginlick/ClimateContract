@@ -38,5 +38,10 @@
         "id": "t-pop-cdln",
         "en": "Please consider subscribing to our newsletter to keep up to date with Climate Contract's progress :)\n<div class=\"fakep\"><input type=\"checkbox\" name=\"newsletter\"></input><label>Send me the newsletter</label></div>",
         "de": ""
+    },
+    "t-pop-test": {
+        "id": "t-pop-test",
+        "en": "##Pilot Phase\nWelcome to Climate Contract! This site is currently being tested.\n\nIf you wish, please share your thoughts to [[word:21]](mailto:[word:21]), or directly to us.\n\n<div class=\"block-button\"><button class=\"button testbutt\" onclick=\"togglePop('testphase')\">Close</button></div>",
+        "de": ""
     }
 }

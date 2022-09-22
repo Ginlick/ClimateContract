@@ -125,7 +125,7 @@ class core {
         <div class="logo-bigcont">
           <a href="'.$this->urllang.'/home?test">
             <div class="logo-cont">
-              <img src="/visuals/CC test.png" alt="'.$this->giveWord(4).'"/>
+              <img src="/visuals/logo.png" alt="'.$this->giveWord(4).'"/>
             </div>
           </a>
         </div>
@@ -260,7 +260,7 @@ class core {
     $headers = '
         <meta charset="UTF-8" />
         <link rel="icon" href="/visuals/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="/styles/style.v3.css">
+        <link rel="stylesheet" type="text/css" href="/styles/style.v4.css">
         <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
         <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
         <link href="/assets/fontawesome/css/brands.css" rel="stylesheet">
@@ -351,11 +351,10 @@ class core {
   function givePopup($text, $name, $specials = "") {
     //        <div class="shader-closer" onclick="togglePop(\''.$name.'\')"></div>
     // can't get popup to block closer
-    if ($specials == "test"){$inset = 'test';}
 
     $return = '
       <div class="shader" id="'.$name.'">
-        <div class="popup '.$inset.'">
+        <div class="popup">
           <i class="popup-closer fakelink fa-solid fa-times" onclick="togglePop(\''.$name.'\')"></i>
           <div class="circle-cont">
             <img class="circle-img" src="/visuals/bigfavicon.png" alt="'.$this->giveWord(4).'" />

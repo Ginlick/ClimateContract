@@ -146,13 +146,18 @@
     },
     "29": {
         "id": 29,
-        "en": "To save your language preference, we need to set 1 cookie.",
-        "de": "Um deine Sprachwahl zu speichern, müssen wir 1 Cookie einsetzen."
+        "en": "To save your language preference, we need to set cookies.",
+        "de": "Um deine Sprachwahl zu speichern, müssen wir Cookies einsetzen."
     },
     "30": {
         "id": 30,
         "en": "Accept and continue",
         "de": "Akzeptieren"
+    },
+    "30-b": {
+        "id": "30-b",
+        "en": "Continue without saving",
+        "de": "Nicht speichern"
     },
     "31": {
         "id": 31,
@@ -492,96 +497,36 @@
     "97": {
         "id": 97,
         "en": "Contract Downloaded",
-        "de": ""
+        "de": "Vertrag Heruntergeladen"
     },
     "98": {
         "id": 98,
         "en": "Close",
-        "de": ""
+        "de": "Schliessen"
     },
     "99": {
         "id": 99,
         "en": "Submit",
-        "de": ""
+        "de": "Senden"
     },
     "100": {
         "id": 100,
         "en": "Ok",
-        "de": ""
+        "de": "OK"
     },
     "101": {
         "id": 101,
         "en": "Don't show this popup again",
-        "de": ""
+        "de": "Nicht mehr anzeigen"
     },
     "102-1": {
         "id": "102-1",
-        "en": "You accept my fricking cookies",
-        "de": ""
+        "en": "By clicking Submit, you accept cookies.",
+        "de": "Mit klick auf Senden werden Cookies akzeptiert."
     },
     "102-2": {
         "id": "102-2",
-        "en": "",
-        "de": ""
-    },
-    "104": {
-        "id": 104,
-        "en": "",
-        "de": ""
-    },
-    "105": {
-        "id": 105,
-        "en": "",
-        "de": ""
-    },
-    "106": {
-        "id": 106,
-        "en": "",
-        "de": ""
-    },
-    "107": {
-        "id": 107,
-        "en": "",
-        "de": ""
-    },
-    "108": {
-        "id": 108,
-        "en": "",
-        "de": ""
-    },
-    "109": {
-        "id": 109,
-        "en": "",
-        "de": ""
-    },
-    "110": {
-        "id": 110,
-        "en": "",
-        "de": ""
-    },
-    "111": {
-        "id": 111,
-        "en": "",
-        "de": ""
-    },
-    "112": {
-        "id": 112,
-        "en": "",
-        "de": ""
-    },
-    "113": {
-        "id": 113,
-        "en": "",
-        "de": ""
-    },
-    "114": {
-        "id": 114,
-        "en": "",
-        "de": ""
-    },
-    "115": {
-        "id": 115,
-        "en": "",
-        "de": ""
+        "en": "By clicking Ok, you accept cookies.",
+        "de": "Mit klick auf OK werden Cookies akzeptiert."
     }
 }
