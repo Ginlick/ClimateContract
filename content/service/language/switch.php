@@ -6,7 +6,7 @@
   }
   if (in_array($_GET["tl"], $core->langs)){
     $core->lang = $_GET["tl"];
-  } else {echo "ouch"; exit;$core->go("/home");}
+  } else {$core->go("/home");}
 
 if (isset($_GET["return"])){
   $return = $core->purate($_GET["return"], "quotes");
@@ -15,7 +15,7 @@ else {
   $return = "/home";
 }
 
-if (isset($_COOKIE["lang"])){
+if ($core->cookiesA){
   $core->go("doswitch?tl=".$core->lang."&return=".$return);
 }
 
@@ -38,7 +38,9 @@ if (isset($_COOKIE["lang"])){
         <div class="textColumn">
           <h1><?php $core->printWord(28); ?></h2>
           <p><?php $core->printWord(29); ?></p>
+
           <a href="doswitch?tl=<?php echo $core->lang."&return=".$return; ?>"><button class="button"><?php $core->printWord(30); ?></button></a>
+          <a href="doswitch?tl=<?php echo $core->lang."&return=".$return; ?>&accept=no"><button class="button grey"><?php $core->printWord("30-b"); ?></button></a>
         </div>
       </section>
     </section>
