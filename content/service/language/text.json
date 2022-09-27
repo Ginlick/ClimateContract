@@ -32,16 +32,16 @@
     "t-pop-cdl": {
         "id": "t-pop-cdl",
         "en": "Thank you for downloading a Climate Contract! If you'd like some explanations and resources for this document, see this <a id=\"gimmeInfolink\" href=\"\" target=\"_blank\">informative article</a>.\n###Share your Experiences\nWe'd love to hear about your Climate Contract experience in a month or so! You can share how it went on our <a href=\"/testimonials\" target=\"_blank\">testimonials</a> page.\n<div class=\"fakep\"><input type=\"checkbox\" name=\"reminder\"></input><label>Remind me in a while</label></div>\n\n###We'll sign. What then?\nSigning a Climate Contract is an important personal step to reducing carbon emissions. There are also many other ways in which you can help save the climate; <a href=\"/content/contracts/engagement\" target=\"_blank\">participate in climate projects today</a>.",
-        "de": ""
+        "de": "Vielen Dank für das Herunterladen eines Vertrags! Wenn ihr Erklärungen und Ressourcen für dieses Dokument sucht, könnt ihr diesen <a id=\"gimmeInfolink\" href=\"\" target=\"_blank\">informativen Artikel</a> aufsuchen.\n###Teilen eure Erfahrungen\nWir würden uns freuen, in einiger Zeit von euren Erfahrungen mit Climate Contract zu hören! Auf unserer Seite <a href=\"/testimonials\" target=\"_blank\">Testimonials</a> könnt ihr dann mitteilen, wie es gelaufen ist.\n<div class=\"fakep\"><input type=\"checkbox\" name=\"reminder\"></input><label>Erinnere mich</label></div>\n\n###Was tun nach der Unterschrift?\nDie Unterzeichnung eines Climate Contracts ist ein wichtiger persönlicher Schritt zur Reduzierung eurer CO2-Emissionen. Es gibt auch viele andere Möglichkeiten, wie ihr helfen könnt, das Klima zu retten; <a href=\"/content/contracts/engagement\" target=\"_blank\">nehmt doch auch an anderen Klimaprojekten teil</a>!"
     },
     "t-pop-cdln": {
         "id": "t-pop-cdln",
         "en": "Please consider subscribing to our newsletter to keep up to date with Climate Contract's progress :)\n<div class=\"fakep\"><input type=\"checkbox\" name=\"newsletter\"></input><label>Send me the newsletter</label></div>",
-        "de": ""
+        "de": "Abonniert euch an unsere Newsletter, um über Climate Contract am Laufenden zu bleiben :)\n<div class=\"fakep\"><input type=\"checkbox\" name=\"newsletter\"></input><label>An die Newsletter abonnieren</label></div>"
     },
     "t-pop-test": {
         "id": "t-pop-test",
-        "en": "##Pilot Phase\nWelcome to Climate Contract! This site is currently being tested.\n\nIf you wish, please share your thoughts to [[word:21]](mailto:[word:21]), or directly to us.\n\n<div class=\"block-button\"><button class=\"button testbutt\" onclick=\"togglePop('testphase')\">Close</button></div>",
-        "de": ""
+        "en": "##Pilot Phase\nWelcome to Climate Contract! This site is currently being tested.\n\nIf you wish, please share your thoughts to [[word:21]](mailto:[word:21]), or directly to us.\n\n<div class=\"block-button\"><button class=\"button testbutt\" onclick=\"togglePop('testphase')\">Ok</button></div>",
+        "de": "#Pilotphase\nWillkommen bei Climate Contract! Diese Website wird derzeit getestet.\n\nWenn Ihr möchtet, teit doch eure Gedanken bitte mit [[word:21]](mailto:[word:21]) oder direkt mit uns.\n\n<div class=\"block-button\"><button class=\"button testbutt\" onclick=\"togglePop('testphase')\">OK</button></div>"
     }
 }

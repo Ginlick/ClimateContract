@@ -17,12 +17,12 @@
     "2-1": {
         "id": "2-1",
         "en": "Information",
-        "de": "Information"
+        "de": "Info-Artikel"
     },
     "2-2": {
         "id": "2-2",
-        "en": "Further Engagement",
-        "de": "Weiter Engagieren"
+        "en": "Get involved!",
+        "de": "Engagier dich!"
     },
     "3": {
         "id": 3,
@@ -491,8 +491,8 @@
     },
     "96": {
         "id": 96,
-        "en": "Climate Engagement",
-        "de": "Sich weiter fürs Klima engagieren"
+        "en": "Get involved!",
+        "de": "Engagiere dich!"
     },
     "97": {
         "id": 97,
