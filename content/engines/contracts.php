@@ -54,7 +54,9 @@ class contracts {
     if ($return = $this->conn->query($query)){
       while ($row = $return->fetch_assoc()){
         if ($type == "articles"){
-          $response .= $this->giveOneArticle($row);
+          if ($row["articleLink"]!=""){
+            $response .= $this->giveOneArticle($row);
+          }
         }
         else if ($type == "contracts"){
           $response .= $this->giveOne($row);
