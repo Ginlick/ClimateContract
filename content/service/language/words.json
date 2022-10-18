@@ -81,8 +81,8 @@
     },
     "16": {
         "id": 16,
-        "en": "Download a contract adapted to your needs from our <a href=\"/contracts#offer\">selection</a>. You can choose from a variety of templates, including travel, clothing, electronic devices and more!",
-        "de": "<a href=\"/contracts#offer\">Wählt den Vertrag aus</a>, der am besten zu eurem Ziel passt, und ladet ihn herunter. Mit der Vielfalt an verfügbaren Verträgen können dein Vertragspartner und du euch für mehr Nachhaltigkeit in verschiedenen Lebensbereichen wie Reisen, Kleidung, elektronische Geräte und mehr einsetzen!"
+        "en": "Choose the contract template that best fits your goals.<br>Feel free to adapt it even further!",
+        "de": "Wählt die Vertragsvorlage, die am besten zu eurem Ziel passt.<br> Ihr könnt die Vorlage nach Belieben weiter bearbeiten und an eure Bedürfnisse anpassen!"
     },
     "17": {
         "id": 17,
@@ -106,8 +106,8 @@
     },
     "21": {
         "id": 21,
-        "en": "admin@climatecontract.org",
-        "de": "admin@climatecontract.org"
+        "en": "admin@climatecontract.net",
+        "de": "admin@climatecontract.net"
     },
     "22": {
         "id": 22,
@@ -116,8 +116,8 @@
     },
     "23": {
         "id": 23,
-        "en": "https://climatecontract.org",
-        "de": "https://climatecontract.org"
+        "en": "https://climatecontract.net",
+        "de": "https://climatecontract.net"
     },
     "24": {
         "id": 24,
