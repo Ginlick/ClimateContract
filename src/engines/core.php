@@ -125,7 +125,7 @@ class core {
         <div class="logo-bigcont">
           <a href="'.$this->urllang.'/home?test">
             <div class="logo-cont">
-              <img src="/visuals/logo.png" alt="'.$this->giveWord(4).'"/>
+              <img src="/visuals/logo2.png" alt="'.$this->giveWord(4).'"/>
             </div>
           </a>
         </div>
@@ -328,6 +328,7 @@ class core {
             <a href="/content/meta/impressum">'.$this->giveWord(80).'</a><br>
             <a href="/content/meta/privacy">'.$this->giveWord(81).'</a><br>
             <a href="/content/meta/support">'.$this->giveWord(93).'</a>
+            <a href="/content/meta/support">'.$this->giveWord(103).'</a>
           </p>
         </div>
       </div>

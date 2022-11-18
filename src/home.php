@@ -76,7 +76,7 @@
       <section class="textColumn-cont">
         <div class="textColumn">
           <p><?php $core->printWord(6, true); ?></p>
-          <p><?php $core->printWord(7); ?></p>
+          <a href="/contracts"><button class="button"><?php $core->printWord("7b"); ?></button></a>
         </div>
 
         <div class="midBar-cont">

@@ -16,8 +16,8 @@
     },
     "2-1": {
         "id": "2-1",
-        "en": "Information",
-        "de": "Info-Artikel"
+        "en": "Choosing a Contract",
+        "de": "Vertrag Auswählen"
     },
     "2-2": {
         "id": "2-2",
@@ -48,6 +48,11 @@
         "id": 7,
         "en": "<a href=\"/contracts\">Download a contract</a> today!",
         "de": "Hier <a href=\"/contracts\">Vertrag herunterladen</a>."
+    },
+    "7b": {
+        "id": "7b",
+        "en": "Download Contract",
+        "de": "Vertrag herunterladen"
     },
     "10": {
         "id": 10,
@@ -446,8 +451,8 @@
     },
     "88": {
         "id": 88,
-        "en": "All Contracts",
-        "de": "Alle Verträge"
+        "en": "Our Climate Contracts",
+        "de": "Unsere Klima-Verträge"
     },
     "89": {
         "id": 89,
@@ -486,8 +491,8 @@
     },
     "95": {
         "id": 95,
-        "en": "Information",
-        "de": "Information"
+        "en": "Choosing a Contract",
+        "de": "Einen Vertrag auswählen"
     },
     "96": {
         "id": 96,
@@ -528,5 +533,30 @@
         "id": "102-2",
         "en": "By clicking Ok, you accept cookies.",
         "de": "Mit klick auf OK werden Cookies akzeptiert."
+    },
+    "103": {
+        "id": 103,
+        "en": "About us",
+        "de": "Über uns"
+    },
+    "desc-simon": {
+        "id": "desc-simon",
+        "en": "Simon Belt\n\nI lead camps with the WWF and facilitate the Climate Fresk to play my part in averting the climate crisis. I work with Climate Contract because finances can seriously restrict young people's ability to live sustainably.\n\nI currently study Computer Science.",
+        "de": "Simon Belt\n\nIch engagiere mich fürs Klima, indem ich die Climate Fresk moderiere und mit dem WWF lager leite. Für mich ist Climate Contract wichtig, weil Finanzen oft eine Hemmung für den Klima-Einsatz junger Menschen sind.\n\nIch studiere momentan Informatik."
+    },
+    "desc-monja": {
+        "id": "desc-monja",
+        "en": "Monja Simmler",
+        "de": "Monja Simmler"
+    },
+    "104": {
+        "id": 104,
+        "en": "About Us",
+        "de": "Über uns"
+    },
+    "105": {
+        "id": 105,
+        "en": "The Climate Contract Project was started by its enthusiastic team in May 2022.",
+        "de": "Das Climate Contract Projekt wurde im Mai 2022 von unserem enthusiastischen Team gegründet."
     }
 }

@@ -41,7 +41,7 @@ class contracts {
           }
           $response .= "</div>";
           if (isset($files["pdf"])){
-            $response .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank">'.$this->core->giveWord(89).'</a>';
+            //$response .= '<a href="'.$this->core->fetchFileUrl($files["pdf"], $this->core->purate($name).".pdf", 2).'" target="_blank">'.$this->core->giveWord(89).'</a>';
           }
         }
       }
