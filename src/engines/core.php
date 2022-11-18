@@ -327,8 +327,8 @@ class core {
           <p>
             <a href="/content/meta/impressum">'.$this->giveWord(80).'</a><br>
             <a href="/content/meta/privacy">'.$this->giveWord(81).'</a><br>
+            <a href="/content/meta/aboutus">'.$this->giveWord(103).'</a><br>
             <a href="/content/meta/support">'.$this->giveWord(93).'</a>
-            <a href="/content/meta/support">'.$this->giveWord(103).'</a>
           </p>
         </div>
       </div>
