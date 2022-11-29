@@ -65,7 +65,7 @@ $core = new core();
             </div>
             <div class="profile-block">
               <div class="profile-image-block">
-                <img class="profile-image" src="/visuals/illusts/blankp.webp" alt="Monja">
+                <img class="profile-image" src="/visuals/illusts/monja.png" alt="Monja">
               </div>
               <div class="profile-text">
                 <?php $core->printWord("desc-monja", true); ?>
