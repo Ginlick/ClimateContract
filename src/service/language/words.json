@@ -17,7 +17,7 @@
     "2-1": {
         "id": "2-1",
         "en": "Choosing a Contract",
-        "de": "Vertrag Auswählen"
+        "de": "CO2-Fussabdruck"
     },
     "2-2": {
         "id": "2-2",
@@ -492,7 +492,7 @@
     "95": {
         "id": 95,
         "en": "Choosing a Contract",
-        "de": "Einen Vertrag auswählen"
+        "de": "Dein CO2-Fussabdruck"
     },
     "96": {
         "id": 96,
@@ -541,13 +541,13 @@
     },
     "desc-simon": {
         "id": "desc-simon",
-        "en": "Simon Belt\n\nI lead camps with the WWF and facilitate the Climate Fresk to play my part in averting the climate crisis. I work with Climate Contract because finances can seriously restrict young people's ability to live sustainably.\n\nI currently study Computer Science.",
-        "de": "Simon Belt\n\nIch engagiere mich fürs Klima, indem ich die Climate Fresk moderiere und mit dem WWF lager leite. Für mich ist Climate Contract wichtig, weil Finanzen oft eine Hemmung für den Klima-Einsatz junger Menschen sind.\n\nIch studiere momentan Informatik."
+        "en": "**Simon Belt**\n\nI lead camps with the WWF and facilitate the Climate Fresk to play my part in averting the climate crisis. I work with Climate Contract because finances can seriously restrict young people's ability to live sustainably.\n\nI currently study Computer Science.",
+        "de": "**Simon Belt**\n\nIch engagiere mich fürs Klima, indem ich die Climate Fresk moderiere und mit dem WWF Lager leite. Für mich ist Climate Contract wichtig, weil Finanzen oft eine Hemmung für den Klima-Einsatz junger Menschen sind.\n\nIch studiere momentan Informatik."
     },
     "desc-monja": {
         "id": "desc-monja",
-        "en": "Monja Simmler",
-        "de": "Monja Simmler"
+        "en": "**Monja Simmler**\n\nI am a high school student at the Zurich Unterland canton school. As a member of the local\nenvironmental group and as co-project leader of Climate Contract I would like to thank for a\na future worth living for today's young people and all generations to come.\nI see an opportunity in the Climate Contract project to make a sustainable and climate-friendly\nlifestyle accessible to all.",
+        "de": "**Monja Simmler**\n\nIch bin Gymnasiastin an der Kantonsschule Zürcher Unterland. Als Mitglied der lokalen\nUmweltgruppe und als Co-Projektleiterin von Climate Contract möchte ich mich für eine\nlebenswerte Zukunft für die Jugendlichen von heute und alle kommenden Generationen einsetzen.\nIm Projekt Climate Contract sehe ich eine Chance, eine nachhaltige und klimafreundliche\nLebensweise für alle zugänglich zu machen."
     },
     "104": {
         "id": 104,
@@ -558,5 +558,20 @@
         "id": 105,
         "en": "The Climate Contract Project was started by its enthusiastic team in May 2022.",
         "de": "Das Climate Contract Projekt wurde im Mai 2022 von unserem enthusiastischen Team gegründet."
+    },
+    "106": {
+        "id": 106,
+        "en": "Feedback",
+        "de": "Feedback"
+    },
+    "106-l": {
+        "id": "106-l",
+        "en": "https://docs.google.com/forms/d/e/1FAIpQLSdMRvxqUI3Jk4gKyt1BMim9U5IjKcZRgriPwi0pCvCBvbFzng/viewform?usp=share_link",
+        "de": "https://docs.google.com/forms/d/e/1FAIpQLSdy6KGCpWJPAtLNpPM7VI_4WF52w-HoP9t356pGPzYa4SGz7Q/viewform?usp=share_link"
+    },
+    "107": {
+        "id": 107,
+        "en": "If you'd like to give us feedback directly, you can use this <a href=\"[word:106-l]\" target=\"_blank\">link</a>.",
+        "de": "Du kannst uns auch <a href=\"[word:106-l]\" target=\"_blank\">direkt Rückmeldung geben</a>."
     }
 }

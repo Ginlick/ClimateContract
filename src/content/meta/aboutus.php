@@ -1,6 +1,6 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT']."/engines/core.php");
-$core = new core();
+$core = new core(4);
 
  ?>﻿
 

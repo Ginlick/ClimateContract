@@ -22,6 +22,7 @@ $blog = $core->useBlogs();
           <h1><?php $core->printWord(39); ?></h1>
           <p><?php $core->printWord(40); ?></p>
           <a href="content/testimonials/write"><button class="button"><?php $core->printWord(41); ?></button></a>
+          <p><?php $core->printWord(107, true); ?></p>
         </div>
         <div class="textColumn">
           <?php echo $blog->genSortCont("explore-feed"); ?>

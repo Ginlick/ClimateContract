@@ -61,8 +61,7 @@
 </head>
 <body>
   <section class="allcontent">
-          <?php echo $core->giveHeader(); ?>
-    </header>
+    <?php echo $core->giveHeader(); ?>
     <section class="maincontent">
       <section class="textColumn-cont nopad" >
         <img class="backimg" src="/visuals/worldglobe.jpg" alt="world handshake" />
@@ -129,8 +128,8 @@
 <script>
 var urlParams = new URLSearchParams(window.location.search);
 
-if (!localStorage["alertdisplayed"] || urlParams.get('test') !== null) {
-  togglePop("testphase");
-  localStorage["alertdisplayed"] = true;
-}
+// if (!localStorage["alertdisplayed"] || urlParams.get('test') !== null) {
+//   togglePop("testphase");
+//   localStorage["alertdisplayed"] = true;
+// }
 </script>

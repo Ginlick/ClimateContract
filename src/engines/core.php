@@ -62,7 +62,7 @@ class core {
   public $textModules = [];
   public $cookiesA = false;
 
-  public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-1","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts", "tabs"=>[["name"=>"2-1","href"=>"/content/contracts/info"], ["name"=>"2-2","href"=>"/content/contracts/engage"]]], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1]];
+  public $navBarElements = [1 => ["name"=>1, "href"=>"/home", "tabs"=>[["name"=>"1-1","href"=>"/content/home/info"]]], 2 => ["name"=>2, "href"=>"/contracts", "tabs"=>[["name"=>"2-1","href"=>"/content/contracts/info"], ["name"=>"2-2","href"=>"/content/contracts/engage"]]], 3=> ["name"=>3, "href"=>"/testimonials", "visibility"=>1], 4=> ["name"=>103, "href"=>"/content/meta/aboutus", "visibility"=>1]];
   public $langs = ["en", "de"];
   public $regArrayR = [
     "basic" => "/[^A-Za-z0-9_]/",
@@ -188,7 +188,7 @@ class core {
       $word = $this->wordArr[$id][$this->lang];
       if ($parseit){
         $this->launchParser();
-        $word = $this->textParse->parse($word, 1);
+        $word = $this->parseText($word);
       }
       return $word;
     }
@@ -328,7 +328,8 @@ class core {
             <a href="/content/meta/impressum">'.$this->giveWord(80).'</a><br>
             <a href="/content/meta/privacy">'.$this->giveWord(81).'</a><br>
             <a href="/content/meta/aboutus">'.$this->giveWord(103).'</a><br>
-            <a href="/content/meta/support">'.$this->giveWord(93).'</a>
+            <a href="/content/meta/support">'.$this->giveWord(93).'</a><br>
+            <a href="'.$this->giveWord("106-l").'" target="_blank">'.$this->giveWord(106).'</a>
           </p>
         </div>
       </div>
